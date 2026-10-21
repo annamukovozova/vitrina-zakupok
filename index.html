@@ -120,7 +120,7 @@ a.cust:hover{color:var(--accent-ink)}
       <button id="loadUrl">Загрузить по ссылке</button>
       <button id="demo" class="primary">Пример: закупки ЕИС</button>
     </div>
-    <div class="note" id="srcInfo">Данные: 9&nbsp;235 страховых закупок из ЕИС (zakupki.gov.ru), 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено 20.10.2026. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.</div>
+    <div class="note" id="srcInfo">Данные: 9&nbsp;235 страховых закупок из ЕИС (zakupki.gov.ru), 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено 20.10.2026. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева. <b>В расчётах по умолчанию закупок: 8&nbsp;691, на 48,8 млрд ₽.</b> Не учтены закупки у единственного поставщика (283, это не торги) и отменённые (262). Чтобы видеть все 9&nbsp;235, снимите галочки в фильтрах.</div>
     <details id="mapBox" class="hide">
       <summary>Какой столбец что означает</summary>
       <div class="map" id="map"></div>
@@ -142,7 +142,7 @@ a.cust:hover{color:var(--accent-ink)}
       <div class="note" id="typeNote">Вид страхования определён по тексту предмета закупки — по ключевым словам. Спорные формулировки попадают в «Прочее».</div>
     </div>
 
-    <div class="kpis" id="kpis"><div class="kpi"><div class="l">Закупок</div><div class="v">8&nbsp;691</div><div class="s">3&nbsp;995 заказчиков</div></div><div class="kpi"><div class="l">Сумма начальных цен</div><div class="v">48,8 млрд ₽</div><div class="s">по объявленным закупкам</div></div><div class="kpi"><div class="l">Типичная закупка</div><div class="v">188 тыс. ₽</div><div class="s">медиана начальной цены</div></div><div class="kpi"><div class="l">Приём заявок идёт</div><div class="v">179</div><div class="s">3,8 млрд ₽</div></div><div class="kpi"><div class="l">Снижение на торгах</div><div class="v">55,5%</div><div class="s">медиана по 4&nbsp;397 закупкам, где известна цена договора</div></div></div>
+    <div class="kpis" id="kpis"><div class="kpi"><div class="l">Закупок</div><div class="v">8&nbsp;691</div><div class="s">3&nbsp;995 заказчиков · из 9&nbsp;235 в данных, без единственного поставщика и отменённых</div></div><div class="kpi"><div class="l">Сумма начальных цен</div><div class="v">48,8 млрд ₽</div><div class="s">по объявленным закупкам</div></div><div class="kpi"><div class="l">Типичная закупка</div><div class="v">188 тыс. ₽</div><div class="s">медиана начальной цены</div></div><div class="kpi"><div class="l">Приём заявок идёт</div><div class="v">179</div><div class="s">3,8 млрд ₽</div></div><div class="kpi"><div class="l">Снижение на торгах</div><div class="v">55,5%</div><div class="s">медиана по 4&nbsp;397 закупкам, где известна цена договора</div></div></div>
 
     <div class="card">
       <h2 style="display:inline">Объявлено закупок по месяцам</h2>
@@ -652,7 +652,7 @@ a.cust:hover{color:var(--accent-ink)}
       <div class="tablewrap"><table id="cust"><tbody><tr><th>Заказчик</th><th>Виды страхования</th><th class="n">Закупок</th><th class="n">Сумма</th></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ"</a></td><td>Опасные объекты, КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС, Ответственность</td><td class="n">6</td><td class="n">3,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФОРВАРД ЭНЕРГО&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФОРВАРД ЭНЕРГО"</a></td><td>Имущество, Опасные объекты, КАСКО и транспорт, Ответственность, ДМС</td><td class="n">6</td><td class="n">3 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ">ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ</a></td><td>ОСАГО, КАСКО и транспорт, НС и личное страхование, Опасные объекты</td><td class="n">8</td><td class="n">2,2 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ">ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>ДМС, НС и личное страхование</td><td class="n">2</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО"</a></td><td>Ответственность, ДМС, Имущество</td><td class="n">4</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ">ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ</a></td><td>НС и личное страхование</td><td class="n">1</td><td class="n">1,7 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ">СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>Имущество, ДМС, НС и личное страхование</td><td class="n">3</td><td class="n">1,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВАНИЮ ДИПЛОМАТИЧЕСКОГО КОРПУСА ПРИ МИНИСТЕРСТВЕ ИНОСТРАННЫХ ДЕЛ РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВ</a></td><td>КАСКО и транспорт, ОСАГО, Имущество, ДМС</td><td class="n">5</td><td class="n">944,5 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;РОСМОРПОРТ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "РОСМОРПОРТ"</a></td><td>Ответственность, КАСКО и транспорт, ОСАГО</td><td class="n">8</td><td class="n">925 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ЦЕНТР&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ЦЕНТР"</a></td><td>КАСКО и транспорт, ОСАГО, Имущество</td><td class="n">3</td><td class="n">902,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1"</a></td><td>Строительно-монтажные риски, Имущество, ДМС</td><td class="n">4</td><td class="n">886,4 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ"</a></td><td>Сельхозстрахование</td><td class="n">4</td><td class="n">877,8 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ТЮМЕНЬ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ТЮМЕНЬ"</a></td><td>ОСАГО, КАСКО и транспорт, Имущество, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">780,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ УРАЛ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ УРАЛ"</a></td><td>КАСКО и транспорт, Имущество, ОСАГО, НС и личное страхование</td><td class="n">4</td><td class="n">691 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ"</a></td><td>ДМС, НС и личное страхование, Имущество</td><td class="n">3</td><td class="n">672,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;Т ПЛЮС&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "Т ПЛЮС"</a></td><td>НС и личное страхование, Ответственность</td><td class="n">2</td><td class="n">622,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА&quot;">ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА"</a></td><td>ДМС, КАСКО и транспорт, Имущество, ОСАГО, Опасные объекты, НС и личное страхование</td><td class="n">12</td><td class="n">594,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛ</a></td><td>КАСКО и транспорт</td><td class="n">3</td><td class="n">585,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРНЫЙ КАВКАЗ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРНЫЙ КАВКАЗ"</a></td><td>Ответственность, КАСКО и транспорт, ДМС, ОСАГО, Имущество</td><td class="n">5</td><td class="n">575,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРО-ЗАПАД&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРО-ЗАПАД"</a></td><td>КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">563,4 млн ₽</td></tr></tbody></table></div>
     </div>
 
-    <p class="note" id="foot">Обновлено в браузере 21.10.2026, 18:12:18. Начальная цена — это бюджет заказчика, а не цена договора. Победители и цены договоров по 44-ФЗ — из реестра контрактов. По 223-ФЗ названия участников в протоколах обезличены, поэтому есть только число заявок и цена победителя по крупнейшим закупкам (80% суммы).</p>
+    <p class="note" id="foot">Обновлено в браузере 21.10.2026, 18:23:01. Начальная цена — это бюджет заказчика, а не цена договора. Победители и цены договоров по 44-ФЗ — из реестра контрактов. По 223-ФЗ названия участников в протоколах обезличены, поэтому есть только число заявок и цена победителя по крупнейшим закупкам (80% суммы).</p>
   </div>
 </div>
 
@@ -825,6 +825,8 @@ function fromDemo(D){
   indexCustomers();
   $('mapBox').classList.add('hide');
   $('srcInfo').innerHTML = `Данные: ${DATA.length.toLocaleString('ru-RU')} страховых закупок из ЕИС (zakupki.gov.ru), 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено ${esc(D.fetched)}. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.`;
+  const ns=DATA.filter(isSingle), nc=DATA.filter(isCancelled), left=DATA.filter(r=>!isSingle(r)&&!isCancelled(r));
+  $('srcInfo').innerHTML += ` <b>В расчётах по умолчанию закупок: ${nf.format(left.length)}, на ${money(left.reduce((a,r)=>a+r.price,0))}.</b> Не учтены закупки у единственного поставщика (${nf.format(ns.length)}, это не торги) и отменённые (${nf.format(nc.length)}). Чтобы видеть все ${nf.format(DATA.length)}, снимите галочки в фильтрах.`;
   initFilters(); render(); $('dash').classList.remove('hide');
 }
 
@@ -854,6 +856,8 @@ function initFilters(){
   $('typeNote').textContent = typeDerived ? 'Вид страхования определён по тексту предмета закупки — по ключевым словам. Спорные формулировки попадают в «Прочее».' : '';
 }
 function sizeOf(p){ return SIZES.findIndex(s=>p>=s[1]&&p<s[2]); }
+function isSingle(r){ return /единственн/i.test(r.method); }
+function isCancelled(r){ return /отмен/i.test(r.stage); }
 function filtered(ignoreType, ignorePeriod){
   const from=+$('fFrom').value, to=+$('fTo').value, law=$('fLaw').value, sz=$('fSize').value;
   const comp=$('fComp').checked, canc=$('fCancel').checked;
@@ -861,8 +865,8 @@ function filtered(ignoreType, ignorePeriod){
     const m=ym(r.date); if (!ignorePeriod && (m<from||m>to)) return false;
     if (law && r.law!==law) return false;
     if (sz){ const i=sizeOf(r.price); if (sz[0]==='b' ? i!==+sz.slice(1) : (i<0||SIZES[i][3]!==sz)) return false; }
-    if (comp && /единственн/i.test(r.method)) return false;
-    if (canc && /отмен/i.test(r.stage)) return false;
+    if (comp && isSingle(r)) return false;
+    if (canc && isCancelled(r)) return false;
     if (!ignoreType && S.types.size && !S.types.has(r.type)) return false;
     return true;
   });
@@ -895,8 +899,9 @@ function render(){
   const sum=rows.reduce((a,r)=>a+r.price,0);
   const open=rows.filter(r=>isOpen(r,today));
   const custs=new Set(rows.map(r=>r.customer));
+  const skip=[$('fComp').checked && DATA.some(isSingle) ? 'единственного поставщика' : '', $('fCancel').checked && DATA.some(isCancelled) ? 'отменённых' : ''].filter(Boolean);
   $('kpis').innerHTML=[
-    ['Закупок', nf.format(rows.length), `${nf.format(custs.size)} заказчиков`],
+    ['Закупок', nf.format(rows.length), `${nf.format(custs.size)} заказчиков`+(skip.length ? ` · из ${nf.format(DATA.length)} в данных, без ${skip.join(' и ')}` : '')],
     ['Сумма начальных цен', money(sum), 'по объявленным закупкам'],
     ['Типичная закупка', money(median(rows.map(r=>r.price))), 'медиана начальной цены'],
     hasTiming() ? ['Приём заявок идёт', nf.format(open.length), open.length? money(open.reduce((a,r)=>a+r.price,0)) : 'сейчас нет']
