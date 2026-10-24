@@ -120,7 +120,7 @@ a.cust:hover{color:var(--accent-ink)}
       <button id="loadUrl">Загрузить по ссылке</button>
       <button id="demo" class="primary">Пример: закупки ЕИС</button>
     </div>
-    <div class="note" id="srcInfo"><b>По умолчанию в графиках и таблицах — 8&nbsp;691 закупка на 48,8 млрд ₽</b>: страховые торги из ЕИС (zakupki.gov.ru) по 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено 20.10.2026. Всего в выгрузке 9&nbsp;235: не учтены закупки у единственного поставщика (283, это не торги) и отменённые (262). Чтобы видеть все, снимите галочки в фильтрах. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.</div>
+    <div class="note" id="srcInfo"><b>По умолчанию в графиках и таблицах — 8&nbsp;027 закупок на 47,6 млрд ₽</b>: страховые торги из ЕИС (zakupki.gov.ru) по 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено 20.10.2026. Всего в выгрузке 9&nbsp;235: не учтены закупки у единственного поставщика (946, это не торги; из них 664 по 223-ФЗ записаны как «иной способ», но пришли в ЕИС сразу завершёнными, без срока подачи заявок) и отменённые (262). Чтобы видеть все, снимите галочки в фильтрах. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.</div>
     <details id="mapBox" class="hide">
       <summary>Какой столбец что означает</summary>
       <div class="map" id="map"></div>
@@ -142,99 +142,96 @@ a.cust:hover{color:var(--accent-ink)}
       <div class="note" id="typeNote">Вид страхования определён по тексту предмета закупки — по ключевым словам. Спорные формулировки попадают в «Прочее».</div>
     </div>
 
-    <div class="kpis" id="kpis"><div class="kpi"><div class="l">Закупок</div><div class="v">8&nbsp;691</div><div class="s">3&nbsp;995 заказчиков · из 9&nbsp;235 в данных, без единственного поставщика и отменённых</div></div><div class="kpi"><div class="l">Сумма начальных цен</div><div class="v">48,8 млрд ₽</div><div class="s">по объявленным закупкам</div></div><div class="kpi"><div class="l">Типичная закупка</div><div class="v">188 тыс. ₽</div><div class="s">медиана начальной цены</div></div><div class="kpi"><div class="l">Приём заявок идёт</div><div class="v">159</div><div class="s">3,4 млрд ₽</div></div><div class="kpi"><div class="l">Снижение на торгах</div><div class="v">55,5%</div><div class="s">медиана по 4&nbsp;397 закупкам, где известна цена договора</div></div></div>
+    <div class="kpis" id="kpis"><div class="kpi"><div class="l">Закупок</div><div class="v">8&nbsp;027</div><div class="s">3&nbsp;729 заказчиков · из 9&nbsp;235 в данных, без единственного поставщика и отменённых</div></div><div class="kpi"><div class="l">Сумма начальных цен</div><div class="v">47,6 млрд ₽</div><div class="s">по объявленным закупкам</div></div><div class="kpi"><div class="l">Типичная закупка</div><div class="v">179 тыс. ₽</div><div class="s">медиана начальной цены</div></div><div class="kpi"><div class="l">Приём заявок идёт</div><div class="v">92</div><div class="s">3,2 млрд ₽</div></div><div class="kpi"><div class="l">Снижение на торгах</div><div class="v">36,8%</div><div class="s">медиана по 1&nbsp;225 закупкам с ценой договора, без ОСАГО</div></div></div>
 
     <div class="card">
       <h2 style="display:inline">Объявлено закупок по месяцам</h2>
       <span class="toggle" role="group" aria-label="Показатель">
         <button data-m="sum" aria-pressed="true">сумма</button><button data-m="cnt" aria-pressed="false">количество</button>
       </span>
-      <div class="chart" id="monthly"><svg viewBox="0 0 1100 280" role="img" aria-label="Закупки по месяцам"><line x1="64" x2="1088" y1="246" y2="246" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="250" text-anchor="end" font-size="12" fill="var(--muted)">0</text><line x1="64" x2="1088" y1="188" y2="188" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="192" text-anchor="end" font-size="12" fill="var(--muted)">2 млрд</text><line x1="64" x2="1088" y1="130" y2="130" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="134" text-anchor="end" font-size="12" fill="var(--muted)">4 млрд</text><line x1="64" x2="1088" y1="72" y2="72" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="76" text-anchor="end" font-size="12" fill="var(--muted)">6 млрд</text><line x1="64" x2="1088" y1="14" y2="14" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="18" text-anchor="end" font-size="12" fill="var(--muted)">8 млрд</text><path d="M67,246V153.43668120096Q67,149.43668120096 71,149.43668120096H135.76923076923077Q139.76923076923077,149.43668120096 139.76923076923077,153.43668120096V246Z" fill="var(--accent)"></path><rect x="64" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="0" class="hit"></rect><text x="103.38461538461539" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">окт 25</text><path d="M145.76923076923077,246V33.95134969886007Q145.76923076923077,29.95134969886007 149.76923076923077,29.95134969886007H214.53846153846155Q218.53846153846155,29.95134969886007 218.53846153846155,33.95134969886007V246Z" fill="var(--accent)"></path><rect x="142.76923076923077" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="1" class="hit"></rect><text x="182.15384615384616" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">ноя</text><path d="M224.53846153846155,246V112.37393866415997Q224.53846153846155,108.37393866415997 228.53846153846155,108.37393866415997H293.3076923076923Q297.3076923076923,108.37393866415997 297.3076923076923,112.37393866415997V246Z" fill="var(--accent)"></path><rect x="221.53846153846155" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="2" class="hit"></rect><text x="260.9230769230769" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">дек</text><path d="M303.3076923076923,246V217.48923139469Q303.3076923076923,213.48923139469 307.3076923076923,213.48923139469H372.0769230769231Q376.0769230769231,213.48923139469 376.0769230769231,217.48923139469V246Z" fill="var(--accent)"></path><rect x="300.3076923076923" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="3" class="hit"></rect><text x="339.69230769230774" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">янв 26</text><path d="M382.0769230769231,246V149.29347946291008Q382.0769230769231,145.29347946291008 386.0769230769231,145.29347946291008H450.84615384615387Q454.84615384615387,145.29347946291008 454.84615384615387,149.29347946291008V246Z" fill="var(--accent)"></path><rect x="379.0769230769231" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="4" class="hit"></rect><text x="418.46153846153845" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">фев</text><path d="M460.84615384615387,246V189.68827361299992Q460.84615384615387,185.68827361299992 464.84615384615387,185.68827361299992H529.6153846153846Q533.6153846153846,185.68827361299992 533.6153846153846,189.68827361299992V246Z" fill="var(--accent)"></path><rect x="457.84615384615387" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="5" class="hit"></rect><text x="497.2307692307693" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">мар</text><path d="M539.6153846153846,246V64.65338766326994Q539.6153846153846,60.65338766326994 543.6153846153846,60.65338766326994H608.3846153846155Q612.3846153846155,60.65338766326994 612.3846153846155,64.65338766326994V246Z" fill="var(--accent)"></path><rect x="536.6153846153846" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="6" class="hit"></rect><text x="576" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">апр</text><path d="M618.3846153846155,246V170.44742231284Q618.3846153846155,166.44742231284 622.3846153846155,166.44742231284H687.1538461538462Q691.1538461538462,166.44742231284 691.1538461538462,170.44742231284V246Z" fill="var(--accent)"></path><rect x="615.3846153846155" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="7" class="hit"></rect><text x="654.7692307692308" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">май</text><path d="M697.1538461538462,246V174.28783984285002Q697.1538461538462,170.28783984285002 701.1538461538462,170.28783984285002H765.9230769230769Q769.9230769230769,170.28783984285002 769.9230769230769,174.28783984285002V246Z" fill="var(--accent)"></path><rect x="694.1538461538462" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="8" class="hit"></rect><text x="733.5384615384615" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">июн</text><path d="M775.9230769230769,246V160.14667826486001Q775.9230769230769,156.14667826486001 779.9230769230769,156.14667826486001H844.6923076923076Q848.6923076923076,156.14667826486001 848.6923076923076,160.14667826486001V246Z" fill="var(--accent)"></path><rect x="772.9230769230769" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="9" class="hit"></rect><text x="812.3076923076923" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">июл</text><path d="M854.6923076923077,246V179.90033001682013Q854.6923076923077,175.90033001682013 858.6923076923077,175.90033001682013H923.4615384615386Q927.4615384615386,175.90033001682013 927.4615384615386,179.90033001682013V246Z" fill="var(--accent)"></path><rect x="851.6923076923077" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="10" class="hit"></rect><text x="891.0769230769231" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">авг</text><path d="M933.4615384615386,246V77.92743255176009Q933.4615384615386,73.92743255176009 937.4615384615386,73.92743255176009H1002.2307692307693Q1006.2307692307693,73.92743255176009 1006.2307692307693,77.92743255176009V246Z" fill="var(--accent)"></path><rect x="930.4615384615386" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="11" class="hit"></rect><text x="969.8461538461539" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">сен</text><path d="M1012.2307692307693,246V151.91074409804997Q1012.2307692307693,147.91074409804997 1016.2307692307693,147.91074409804997H1081Q1085,147.91074409804997 1085,151.91074409804997V246Z" fill="var(--accent)"></path><rect x="1009.2307692307693" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="12" class="hit"></rect><text x="1048.6153846153848" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">окт</text><line x1="64" x2="1088" y1="246" y2="246" stroke="var(--line)" stroke-width="1"></line></svg><div class="tip"></div></div>
+      <div class="chart" id="monthly"><svg viewBox="0 0 1100 280" role="img" aria-label="Закупки по месяцам"><line x1="64" x2="1088" y1="246" y2="246" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="250" text-anchor="end" font-size="12" fill="var(--muted)">0</text><line x1="64" x2="1088" y1="188" y2="188" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="192" text-anchor="end" font-size="12" fill="var(--muted)">2 млрд</text><line x1="64" x2="1088" y1="130" y2="130" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="134" text-anchor="end" font-size="12" fill="var(--muted)">4 млрд</text><line x1="64" x2="1088" y1="72" y2="72" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="76" text-anchor="end" font-size="12" fill="var(--muted)">6 млрд</text><line x1="64" x2="1088" y1="14" y2="14" stroke="var(--grid)" stroke-width="1"></line><text x="56" y="18" text-anchor="end" font-size="12" fill="var(--muted)">8 млрд</text><path d="M67,246V164.84777147416997Q67,160.84777147416997 71,160.84777147416997H135.76923076923077Q139.76923076923077,160.84777147416997 139.76923076923077,164.84777147416997V246Z" fill="var(--accent)"></path><rect x="64" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="0" class="hit"></rect><text x="103.38461538461539" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">окт 25</text><path d="M145.76923076923077,246V35.40441833908005Q145.76923076923077,31.404418339080053 149.76923076923077,31.404418339080053H214.53846153846155Q218.53846153846155,31.404418339080053 218.53846153846155,35.40441833908005V246Z" fill="var(--accent)"></path><rect x="142.76923076923077" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="1" class="hit"></rect><text x="182.15384615384616" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">ноя</text><path d="M224.53846153846155,246V114.40470635447994Q224.53846153846155,110.40470635447994 228.53846153846155,110.40470635447994H293.3076923076923Q297.3076923076923,110.40470635447994 297.3076923076923,114.40470635447994V246Z" fill="var(--accent)"></path><rect x="221.53846153846155" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="2" class="hit"></rect><text x="260.9230769230769" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">дек</text><path d="M303.3076923076923,246V219.14223214839998Q303.3076923076923,215.14223214839998 307.3076923076923,215.14223214839998H372.0769230769231Q376.0769230769231,215.14223214839998 376.0769230769231,219.14223214839998V246Z" fill="var(--accent)"></path><rect x="300.3076923076923" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="3" class="hit"></rect><text x="339.69230769230774" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">янв 26</text><path d="M382.0769230769231,246V151.40123120457008Q382.0769230769231,147.40123120457008 386.0769230769231,147.40123120457008H450.84615384615387Q454.84615384615387,147.40123120457008 454.84615384615387,151.40123120457008V246Z" fill="var(--accent)"></path><rect x="379.0769230769231" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="4" class="hit"></rect><text x="418.46153846153845" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">фев</text><path d="M460.84615384615387,246V191.83189669556992Q460.84615384615387,187.83189669556992 464.84615384615387,187.83189669556992H529.6153846153846Q533.6153846153846,187.83189669556992 533.6153846153846,191.83189669556992V246Z" fill="var(--accent)"></path><rect x="457.84615384615387" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="5" class="hit"></rect><text x="497.2307692307693" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">мар</text><path d="M539.6153846153846,246V66.13325691738993Q539.6153846153846,62.13325691738993 543.6153846153846,62.13325691738993H608.3846153846155Q612.3846153846155,62.13325691738993 612.3846153846155,66.13325691738993V246Z" fill="var(--accent)"></path><rect x="536.6153846153846" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="6" class="hit"></rect><text x="576" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">апр</text><path d="M618.3846153846155,246V177.86820236193Q618.3846153846155,173.86820236193 622.3846153846155,173.86820236193H687.1538461538462Q691.1538461538462,173.86820236193 691.1538461538462,177.86820236193V246Z" fill="var(--accent)"></path><rect x="615.3846153846155" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="7" class="hit"></rect><text x="654.7692307692308" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">май</text><path d="M697.1538461538462,246V174.92786904854006Q697.1538461538462,170.92786904854006 701.1538461538462,170.92786904854006H765.9230769230769Q769.9230769230769,170.92786904854006 769.9230769230769,174.92786904854006V246Z" fill="var(--accent)"></path><rect x="694.1538461538462" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="8" class="hit"></rect><text x="733.5384615384615" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">июн</text><path d="M775.9230769230769,246V161.5988571903Q775.9230769230769,157.5988571903 779.9230769230769,157.5988571903H844.6923076923076Q848.6923076923076,157.5988571903 848.6923076923076,161.5988571903V246Z" fill="var(--accent)"></path><rect x="772.9230769230769" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="9" class="hit"></rect><text x="812.3076923076923" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">июл</text><path d="M854.6923076923077,246V180.61273625903013Q854.6923076923077,176.61273625903013 858.6923076923077,176.61273625903013H923.4615384615386Q927.4615384615386,176.61273625903013 927.4615384615386,180.61273625903013V246Z" fill="var(--accent)"></path><rect x="851.6923076923077" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="10" class="hit"></rect><text x="891.0769230769231" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">авг</text><path d="M933.4615384615386,246V78.6133814681501Q933.4615384615386,74.6133814681501 937.4615384615386,74.6133814681501H1002.2307692307693Q1006.2307692307693,74.6133814681501 1006.2307692307693,78.6133814681501V246Z" fill="var(--accent)"></path><rect x="930.4615384615386" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="11" class="hit"></rect><text x="969.8461538461539" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">сен</text><path d="M1012.2307692307693,246V152.21932401814996Q1012.2307692307693,148.21932401814996 1016.2307692307693,148.21932401814996H1081Q1085,148.21932401814996 1085,152.21932401814996V246Z" fill="var(--accent)"></path><rect x="1009.2307692307693" y="14" width="78.76923076923077" height="232" fill="transparent" data-i="12" class="hit"></rect><text x="1048.6153846153848" y="266" text-anchor="middle" font-size="12" fill="var(--muted)">окт</text><line x1="64" x2="1088" y1="246" y2="246" stroke="var(--line)" stroke-width="1"></line></svg><div class="tip"></div></div>
     </div>
 
     <div class="grid2">
       <div class="card">
         <h2>Виды страхования <span class="note" style="font-weight:400">· нажмите, чтобы отфильтровать</span></h2>
-        <div class="barlist" id="types"><div class="row" data-k="ДМС" title="ДМС: 706 закупок, средняя 28,8 млн ₽">
+        <div class="barlist" id="types"><div class="row" data-k="ДМС" title="ДМС: 607 закупок, средняя 32,2 млн ₽">
       <div class="name">ДМС</div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
-      <div class="val">20,3 млрд ₽ · 706</div></div><div class="row" data-k="Имущество" title="Имущество: 577 закупок, средняя 17,6 млн ₽">
+      <div class="val">19,5 млрд ₽ · 607</div></div><div class="row" data-k="Имущество" title="Имущество: 524 закупок, средняя 19,3 млн ₽">
       <div class="name">Имущество</div>
-      <div class="track"><div class="fill" style="width:49.8%"></div></div>
-      <div class="val">10,1 млрд ₽ · 577</div></div><div class="row" data-k="ОСАГО" title="ОСАГО: 4&nbsp;971 закупок, средняя 1,1 млн ₽">
+      <div class="track"><div class="fill" style="width:51.6%"></div></div>
+      <div class="val">10,1 млрд ₽ · 524</div></div><div class="row" data-k="ОСАГО" title="ОСАГО: 4&nbsp;796 закупок, средняя 1,2 млн ₽">
       <div class="name">ОСАГО</div>
-      <div class="track"><div class="fill" style="width:27.5%"></div></div>
-      <div class="val">5,6 млрд ₽ · 4&nbsp;971</div></div><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: 522 закупок, средняя 7,8 млн ₽">
+      <div class="track"><div class="fill" style="width:28.3%"></div></div>
+      <div class="val">5,5 млрд ₽ · 4&nbsp;796</div></div><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: 486 закупок, средняя 8,2 млн ₽">
       <div class="name">НС и личное страхование</div>
-      <div class="track"><div class="fill" style="width:20.0%"></div></div>
-      <div class="val">4,1 млрд ₽ · 522</div></div><div class="row" data-k="Ответственность" title="Ответственность: 457 закупок, средняя 7,2 млн ₽">
+      <div class="track"><div class="fill" style="width:20.4%"></div></div>
+      <div class="val">4 млрд ₽ · 486</div></div><div class="row" data-k="Ответственность" title="Ответственность: 393 закупок, средняя 8,3 млн ₽">
       <div class="name">Ответственность</div>
-      <div class="track"><div class="fill" style="width:16.2%"></div></div>
-      <div class="val">3,3 млрд ₽ · 457</div></div><div class="row" data-k="КАСКО и транспорт" title="КАСКО и транспорт: 861 закупок, средняя 3,7 млн ₽">
+      <div class="track"><div class="fill" style="width:16.6%"></div></div>
+      <div class="val">3,3 млрд ₽ · 393</div></div><div class="row" data-k="КАСКО и транспорт" title="КАСКО и транспорт: 698 закупок, средняя 4,4 млн ₽">
       <div class="name">КАСКО и транспорт</div>
-      <div class="track"><div class="fill" style="width:15.6%"></div></div>
-      <div class="val">3,2 млрд ₽ · 861</div></div><div class="row" data-k="Сельхозстрахование" title="Сельхозстрахование: 10 закупок, средняя 89,5 млн ₽">
+      <div class="track"><div class="fill" style="width:15.7%"></div></div>
+      <div class="val">3,1 млрд ₽ · 698</div></div><div class="row" data-k="Сельхозстрахование" title="Сельхозстрахование: 7 закупок, средняя 127,8 млн ₽">
       <div class="name">Сельхозстрахование</div>
-      <div class="track"><div class="fill" style="width:4.4%"></div></div>
-      <div class="val">895,4 млн ₽ · 10</div></div><div class="row" data-k="Строительно-монтажные риски" title="Строительно-монтажные риски: 26 закупок, средняя 26,2 млн ₽">
+      <div class="track"><div class="fill" style="width:4.6%"></div></div>
+      <div class="val">894,3 млн ₽ · 7</div></div><div class="row" data-k="Строительно-монтажные риски" title="Строительно-монтажные риски: 22 закупок, средняя 30,8 млн ₽">
       <div class="name">Строительно-монтажные риски</div>
-      <div class="track"><div class="fill" style="width:3.4%"></div></div>
-      <div class="val">681,6 млн ₽ · 26</div></div><div class="row" data-k="Опасные объекты" title="Опасные объекты: 354 закупок, средняя 861 тыс. ₽">
+      <div class="track"><div class="fill" style="width:3.5%"></div></div>
+      <div class="val">678,7 млн ₽ · 22</div></div><div class="row" data-k="Опасные объекты" title="Опасные объекты: 343 закупок, средняя 881 тыс. ₽">
       <div class="name">Опасные объекты</div>
       <div class="track"><div class="fill" style="width:1.5%"></div></div>
-      <div class="val">304,8 млн ₽ · 354</div></div><div class="row" data-k="Прочее" title="Прочее: 194 закупок, средняя 1,3 млн ₽">
+      <div class="val">302,3 млн ₽ · 343</div></div><div class="row" data-k="Прочее" title="Прочее: 141 закупок, средняя 1,5 млн ₽">
       <div class="name">Прочее</div>
-      <div class="track"><div class="fill" style="width:1.3%"></div></div>
-      <div class="val">260,5 млн ₽ · 194</div></div><div class="row" data-k="Грузы" title="Грузы: 13 закупок, средняя 5,6 млн ₽">
+      <div class="track"><div class="fill" style="width:1.1%"></div></div>
+      <div class="val">206,8 млн ₽ · 141</div></div><div class="row" data-k="Грузы" title="Грузы: 10 закупок, средняя 7 млн ₽">
       <div class="name">Грузы</div>
       <div class="track"><div class="fill" style="width:0.4%"></div></div>
-      <div class="val">73 млн ₽ · 13</div></div></div>
+      <div class="val">70,5 млн ₽ · 10</div></div></div>
       </div>
       <div class="card">
         <h2>Размер закупки</h2>
-        <div class="barlist" id="sizes"><div class="row" data-k="до 100 тыс." title="малые: 3&nbsp;128 закупок на 122,1 млн ₽">
+        <div class="barlist" id="sizes"><div class="row" data-k="до 100 тыс." title="малые: 3&nbsp;057 закупок на 120,1 млн ₽">
       <div class="name">до 100 тыс.</div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
-      <div class="val">3&nbsp;128 · 122,1 млн ₽</div></div><div class="row" data-k="100–500 тыс." title="малые: 2&nbsp;729 закупок на 636,2 млн ₽">
+      <div class="val">3&nbsp;057 · 120,1 млн ₽</div></div><div class="row" data-k="100–500 тыс." title="малые: 2&nbsp;341 закупок на 550,8 млн ₽">
       <div class="name">100–500 тыс.</div>
-      <div class="track"><div class="fill" style="width:87.2%"></div></div>
-      <div class="val">2&nbsp;729 · 636,2 млн ₽</div></div><div class="row" data-k="0,5–2 млн" title="средние: 1&nbsp;460 закупок на 1,5 млрд ₽">
+      <div class="track"><div class="fill" style="width:76.6%"></div></div>
+      <div class="val">2&nbsp;341 · 550,8 млн ₽</div></div><div class="row" data-k="0,5–2 млн" title="средние: 1&nbsp;315 закупок на 1,4 млрд ₽">
       <div class="name">0,5–2 млн</div>
-      <div class="track"><div class="fill" style="width:46.7%"></div></div>
-      <div class="val">1&nbsp;460 · 1,5 млрд ₽</div></div><div class="row" data-k="2–10 млн" title="средние: 904 закупок на 3,9 млрд ₽">
+      <div class="track"><div class="fill" style="width:43.0%"></div></div>
+      <div class="val">1&nbsp;315 · 1,4 млрд ₽</div></div><div class="row" data-k="2–10 млн" title="средние: 857 закупок на 3,7 млрд ₽">
       <div class="name">2–10 млн</div>
-      <div class="track"><div class="fill" style="width:28.9%"></div></div>
-      <div class="val">904 · 3,9 млрд ₽</div></div><div class="row" data-k="10–50 млн" title="крупные: 351 закупок на 7,8 млрд ₽">
+      <div class="track"><div class="fill" style="width:28.0%"></div></div>
+      <div class="val">857 · 3,7 млрд ₽</div></div><div class="row" data-k="10–50 млн" title="крупные: 340 закупок на 7,6 млрд ₽">
       <div class="name">10–50 млн</div>
-      <div class="track"><div class="fill" style="width:11.2%"></div></div>
-      <div class="val">351 · 7,8 млрд ₽</div></div><div class="row" data-k="от 50 млн" title="крупные: 119 закупок на 34,8 млрд ₽">
+      <div class="track"><div class="fill" style="width:11.1%"></div></div>
+      <div class="val">340 · 7,6 млрд ₽</div></div><div class="row" data-k="от 50 млн" title="крупные: 117 закупок на 34,3 млрд ₽">
       <div class="name">от 50 млн</div>
       <div class="track"><div class="fill" style="width:3.8%"></div></div>
-      <div class="val">119 · 34,8 млрд ₽</div></div></div>
+      <div class="val">117 · 34,3 млрд ₽</div></div></div>
         <div class="note">Малые — до 500 тыс. ₽, средние — 0,5–10 млн ₽, крупные — от 10 млн ₽ начальной цены.</div>
       </div>
     </div>
 
     <div class="card">
       <h2>Что видно в выборке</h2>
-      <ul class="insights" id="insights"><li>Больше всего денег — в виде «ДМС»: 20,3 млрд ₽, 42% суммы выборки.</li><li>Больше всего закупок объявили в декабре 2025: 967 против 693 в среднем за месяц.</li><li>Крупные закупки (от 10 млн ₽) — 5% по числу, но 87% по сумме.</li><li>По 223-ФЗ (госкомпании) — 41% закупок и 75% суммы.</li><li>Десять крупнейших заказчиков дают 38% суммы.</li></ul>
+      <ul class="insights" id="insights"><li>Больше всего денег — в виде «ДМС»: 19,5 млрд ₽, 41% суммы выборки.</li><li>Больше всего закупок объявили в ноябре 2025: 886 против 639 в среднем за месяц.</li><li>Крупные закупки (от 10 млн ₽) — 6% по числу, но 88% по сумме.</li><li>По 223-ФЗ (госкомпании) — 36% закупок и 74% суммы.</li><li>Десять крупнейших заказчиков дают 39% суммы.</li><li>Без торгов, у единственного поставщика, — ещё 946 закупок на 1,4 млрд ₽, в цифры выше они не входят. Из них 664 по 223-ФЗ записаны как «иной способ», но пришли в ЕИС сразу завершёнными, без срока подачи заявок.</li></ul>
     </div>
 
     <div class="card" id="winCard">
       <h2>Кто выигрывает</h2>
-      <div class="note" id="winNote" style="margin:-4px 0 8px">Страховщик-победитель известен для 4&nbsp;348 из 8&nbsp;691 закупок выборки — по 44-ФЗ, из реестра контрактов. По 223-ФЗ названия участников в протоколах ЕИС обезличены. Доля — от суммы договоров этих закупок.</div>
-      <div class="tablewrap"><table id="win"><tbody><tr><th>Страховщик</th><th>Чаще всего</th><th class="n">Выиграл закупок</th><th class="n">Сумма договоров</th><th class="n">Доля</th><th class="n">Снижение, медиана</th></tr><tr><td>АО "СОГАЗ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">407</td><td class="n">617,4 млн ₽</td><td class="n">21,9%</td><td class="n">53,5%</td></tr><tr><td>САО "РЕСО-ГАРАНТИЯ"</td><td>ОСАГО, Опасные объекты</td><td class="n">100</td><td class="n">496,4 млн ₽</td><td class="n">17,6%</td><td class="n">50,3%</td></tr><tr><td>СПАО "ИНГОССТРАХ"</td><td>ОСАГО, Опасные объекты</td><td class="n">798</td><td class="n">328,7 млн ₽</td><td class="n">11,7%</td><td class="n">51,3%</td></tr><tr><td>САО "ВСК"</td><td>ОСАГО, Опасные объекты</td><td class="n">957</td><td class="n">280,3 млн ₽</td><td class="n">10%</td><td class="n">61,4%</td></tr><tr><td>АО "АЛЬФАСТРАХОВАНИЕ"</td><td>ОСАГО, Опасные объекты</td><td class="n">784</td><td class="n">270,8 млн ₽</td><td class="n">9,6%</td><td class="n">59,2%</td></tr><tr><td>ООО СК "СБЕРБАНК СТРАХОВАНИЕ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">71</td><td class="n">204,4 млн ₽</td><td class="n">7,3%</td><td class="n">48,2%</td></tr><tr><td>АО "МАКС"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">57</td><td class="n">100,1 млн ₽</td><td class="n">3,6%</td><td class="n">32,7%</td></tr><tr><td>ООО "АМТ СТРАХОВАНИЕ"</td><td>Ответственность, Имущество</td><td class="n">20</td><td class="n">83,4 млн ₽</td><td class="n">3%</td><td class="n">3,4%</td></tr><tr><td>АО "ГСК "ЮГОРИЯ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">200</td><td class="n">59,3 млн ₽</td><td class="n">2,1%</td><td class="n">52,5%</td></tr><tr><td>ООО СТРАХОВАЯ КОМПАНИЯ "ГЕЛИОС"</td><td>Имущество, ОСАГО</td><td class="n">88</td><td class="n">56,4 млн ₽</td><td class="n">2%</td><td class="n">52,7%</td></tr><tr><td>ООО "КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ"</td><td>ДМС</td><td class="n">2</td><td class="n">49,3 млн ₽</td><td class="n">1,7%</td><td class="n">28,5%</td></tr><tr><td>АО "ЗЕТТА СТРАХОВАНИЕ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">218</td><td class="n">46 млн ₽</td><td class="n">1,6%</td><td class="n">61,3%</td></tr><tr><td>АО "ОСК"</td><td>КАСКО и транспорт, Имущество</td><td class="n">62</td><td class="n">39,1 млн ₽</td><td class="n">1,4%</td><td class="n">49,9%</td></tr><tr><td>ООО "СК "СОГЛАСИЕ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">189</td><td class="n">38 млн ₽</td><td class="n">1,3%</td><td class="n">64,5%</td></tr><tr><td>ООО "АБСОЛЮТ СТРАХОВАНИЕ"</td><td>ОСАГО, КАСКО и транспорт</td><td class="n">19</td><td class="n">34,6 млн ₽</td><td class="n">1,2%</td><td class="n">19,2%</td></tr></tbody></table></div>
+      <div class="note" id="winNote" style="margin:-4px 0 8px">Страховщик-победитель известен для 4&nbsp;348 из 8&nbsp;027 закупок выборки — по 44-ФЗ, из реестра контрактов. По 223-ФЗ названия участников в протоколах ЕИС обезличены. Доля — от суммы договоров этих закупок.</div>
+      <div class="tablewrap"><table id="win"><tbody><tr><th>Страховщик</th><th>Чаще всего</th><th class="n">Выиграл закупок</th><th class="n">Сумма договоров</th><th class="n">Доля</th><th class="n">Снижение, медиана (без ОСАГО)</th></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;СОГАЗ&quot;">АО "СОГАЗ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">407</td><td class="n">617,4 млн ₽</td><td class="n">21,9%</td><td class="n">24,9%</td></tr><tr><td><a href="#" class="cust" data-ins="САО &quot;РЕСО-ГАРАНТИЯ&quot;">САО "РЕСО-ГАРАНТИЯ"</a></td><td>ОСАГО, Опасные объекты</td><td class="n">100</td><td class="n">496,4 млн ₽</td><td class="n">17,6%</td><td class="n">15,7%</td></tr><tr><td><a href="#" class="cust" data-ins="СПАО &quot;ИНГОССТРАХ&quot;">СПАО "ИНГОССТРАХ"</a></td><td>ОСАГО, Опасные объекты</td><td class="n">798</td><td class="n">328,7 млн ₽</td><td class="n">11,7%</td><td class="n">17,6%</td></tr><tr><td><a href="#" class="cust" data-ins="САО &quot;ВСК&quot;">САО "ВСК"</a></td><td>ОСАГО, Опасные объекты</td><td class="n">957</td><td class="n">280,3 млн ₽</td><td class="n">10%</td><td class="n">24,6%</td></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;АЛЬФАСТРАХОВАНИЕ&quot;">АО "АЛЬФАСТРАХОВАНИЕ"</a></td><td>ОСАГО, Опасные объекты</td><td class="n">784</td><td class="n">270,8 млн ₽</td><td class="n">9,6%</td><td class="n">18%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО СК &quot;СБЕРБАНК СТРАХОВАНИЕ&quot;">ООО СК "СБЕРБАНК СТРАХОВАНИЕ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">71</td><td class="n">204,4 млн ₽</td><td class="n">7,3%</td><td class="n">35,3%</td></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;МАКС&quot;">АО "МАКС"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">57</td><td class="n">100,1 млн ₽</td><td class="n">3,6%</td><td class="n">37,6%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО &quot;АМТ СТРАХОВАНИЕ&quot;">ООО "АМТ СТРАХОВАНИЕ"</a></td><td>Ответственность, Имущество</td><td class="n">20</td><td class="n">83,4 млн ₽</td><td class="n">3%</td><td class="n">3,4%</td></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;ГСК &quot;ЮГОРИЯ&quot;">АО "ГСК "ЮГОРИЯ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">200</td><td class="n">59,3 млн ₽</td><td class="n">2,1%</td><td class="n">42,6%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО СТРАХОВАЯ КОМПАНИЯ &quot;ГЕЛИОС&quot;">ООО СТРАХОВАЯ КОМПАНИЯ "ГЕЛИОС"</a></td><td>Имущество, ОСАГО</td><td class="n">88</td><td class="n">56,4 млн ₽</td><td class="n">2%</td><td class="n">48,2%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;">ООО "КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ"</a></td><td>ДМС</td><td class="n">2</td><td class="n">49,3 млн ₽</td><td class="n">1,7%</td><td class="n">28,5%</td></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;ЗЕТТА СТРАХОВАНИЕ&quot;">АО "ЗЕТТА СТРАХОВАНИЕ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">218</td><td class="n">46 млн ₽</td><td class="n">1,6%</td><td class="n">54,8%</td></tr><tr><td><a href="#" class="cust" data-ins="АО &quot;ОСК&quot;">АО "ОСК"</a></td><td>КАСКО и транспорт, Имущество</td><td class="n">62</td><td class="n">39,1 млн ₽</td><td class="n">1,4%</td><td class="n">49,9%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО &quot;СК &quot;СОГЛАСИЕ&quot;">ООО "СК "СОГЛАСИЕ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">189</td><td class="n">38 млн ₽</td><td class="n">1,3%</td><td class="n">58,2%</td></tr><tr><td><a href="#" class="cust" data-ins="ООО &quot;АБСОЛЮТ СТРАХОВАНИЕ&quot;">ООО "АБСОЛЮТ СТРАХОВАНИЕ"</a></td><td>ОСАГО, КАСКО и транспорт</td><td class="n">19</td><td class="n">34,6 млн ₽</td><td class="n">1,2%</td><td class="n">51%</td></tr></tbody></table></div>
     </div>
 
     <div class="card" id="discCard">
       <h2>Снижение цены на торгах по видам страхования</h2>
-      <div class="barlist" id="disc"><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: медиана снижения 63% по 165 закупкам">
+      <div class="barlist" id="disc"><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: медиана снижения 63,3% по 164 закупкам">
       <div class="name">НС и личное страхование</div>
-      <div class="track"><div class="fill" style="width:63.0%"></div></div>
-      <div class="val">63% · 165</div></div><div class="row" data-k="ОСАГО" title="ОСАГО: медиана снижения 61% по 3&nbsp;170 закупкам">
-      <div class="name">ОСАГО</div>
-      <div class="track"><div class="fill" style="width:61.0%"></div></div>
-      <div class="val">61% · 3&nbsp;170</div></div><div class="row" data-k="Имущество" title="Имущество: медиана снижения 51% по 266 закупкам">
+      <div class="track"><div class="fill" style="width:63.3%"></div></div>
+      <div class="val">63,3% · 164</div></div><div class="row" data-k="Имущество" title="Имущество: медиана снижения 51% по 266 закупкам">
       <div class="name">Имущество</div>
       <div class="track"><div class="fill" style="width:51.0%"></div></div>
       <div class="val">51% · 266</div></div><div class="row" data-k="КАСКО и транспорт" title="КАСКО и транспорт: медиана снижения 49,3% по 304 закупкам">
@@ -249,17 +246,18 @@ a.cust:hover{color:var(--accent-ink)}
       <div class="val">14,5% · 153</div></div><div class="row" data-k="Опасные объекты" title="Опасные объекты: медиана снижения 10,3% по 203 закупкам">
       <div class="name">Опасные объекты</div>
       <div class="track"><div class="fill" style="width:10.3%"></div></div>
-      <div class="val">10,3% · 203</div></div><div class="row" data-k="ДМС" title="ДМС: медиана снижения 3,7% по 76 закупкам">
+      <div class="val">10,3% · 203</div></div><div class="row" data-k="ДМС" title="ДМС: медиана снижения 4% по 75 закупкам">
       <div class="name">ДМС</div>
-      <div class="track"><div class="fill" style="width:3.7%"></div></div>
-      <div class="val">3,7% · 76</div></div></div>
+      <div class="track"><div class="fill" style="width:4.0%"></div></div>
+      <div class="val">4% · 75</div></div></div>
       <div class="note">Снижение — насколько цена договора ниже начальной. Медиана: у половины закупок снижение больше, у половины меньше. Показаны виды, где цена договора известна хотя бы у 10 закупок. Большое снижение не всегда означает жёсткую конкуренцию: если заказчик заложил начальную цену с запасом, снижение получится большим и без борьбы.</div>
+      <div class="note"><b>ОСАГО здесь нет.</b> Тариф задаёт Банк России, а начальная цена в закупке — потолок, который заказчик считает по формуле тарифа. В 12 проверенных закупках в ЕИС везде стоит «максимальное значение цены контракта» по этой формуле, а торг идёт по сумме премий за каждую машину. Цена договора бывает ниже потолка в разы, у четверти закупок больше чем на 80%: это разница между потолком заказчика и тарифом, который посчитал страховщик.</div>
     </div>
 
     <div class="card" id="compCard">
       <h2>Конкуренция: сколько заявок подают</h2>
       <div class="note" id="compNote" style="margin:-4px 0 8px">Число заявок — из протоколов ЕИС по крупнейшим закупкам 223-ФЗ, которые дают 80% суммы. Названия участников в протоколах обезличены.</div>
-      <ul class="insights" id="compFacts"><li>Закупок с одной заявкой — 59 из 161 (36,6%), на них 45,5% суммы.</li><li>Медиана — 2 заявки на закупку.</li><li>Медианное снижение цены победителя — 0,3% от начальной (по 73 закупкам, где цена победителя известна).</li></ul>
+      <ul class="insights" id="compFacts"><li>Закупок с одной заявкой — 57 из 159 (35,8%), на них 45,3% суммы.</li><li>Медиана — 2 заявки на закупку.</li><li>Медианное снижение цены победителя — 0,3% от начальной (по 70 закупкам, где цена победителя известна).</li></ul>
       <div class="grid2" style="margin-top:12px">
         <div><div class="note" style="margin:0 0 6px">Доля закупок с одной заявкой, по видам</div><div class="barlist" id="compTypes"><div class="row" data-k="Ответственность" title="Ответственность: одна заявка в 7 из 11 закупок">
       <div class="name">Ответственность</div>
@@ -267,16 +265,16 @@ a.cust:hover{color:var(--accent-ink)}
       <div class="val">63,6% · 11</div></div><div class="row" data-k="Имущество" title="Имущество: одна заявка в 14 из 29 закупок">
       <div class="name">Имущество</div>
       <div class="track"><div class="fill" style="width:48.3%"></div></div>
-      <div class="val">48,3% · 29</div></div><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: одна заявка в 3 из 7 закупок">
-      <div class="name">НС и личное страхование</div>
-      <div class="track"><div class="fill" style="width:42.9%"></div></div>
-      <div class="val">42,9% · 7</div></div><div class="row" data-k="Строительно-монтажные риски" title="Строительно-монтажные риски: одна заявка в 2 из 5 закупок">
+      <div class="val">48,3% · 29</div></div><div class="row" data-k="Строительно-монтажные риски" title="Строительно-монтажные риски: одна заявка в 2 из 5 закупок">
       <div class="name">Строительно-монтажные риски</div>
       <div class="track"><div class="fill" style="width:40.0%"></div></div>
-      <div class="val">40% · 5</div></div><div class="row" data-k="ДМС" title="ДМС: одна заявка в 30 из 85 закупок">
+      <div class="val">40% · 5</div></div><div class="row" data-k="ДМС" title="ДМС: одна заявка в 29 из 84 закупок">
       <div class="name">ДМС</div>
-      <div class="track"><div class="fill" style="width:35.3%"></div></div>
-      <div class="val">35,3% · 85</div></div><div class="row" data-k="КАСКО и транспорт" title="КАСКО и транспорт: одна заявка в 2 из 13 закупок">
+      <div class="track"><div class="fill" style="width:34.5%"></div></div>
+      <div class="val">34,5% · 84</div></div><div class="row" data-k="НС и личное страхование" title="НС и личное страхование: одна заявка в 2 из 6 закупок">
+      <div class="name">НС и личное страхование</div>
+      <div class="track"><div class="fill" style="width:33.3%"></div></div>
+      <div class="val">33,3% · 6</div></div><div class="row" data-k="КАСКО и транспорт" title="КАСКО и транспорт: одна заявка в 2 из 13 закупок">
       <div class="name">КАСКО и транспорт</div>
       <div class="track"><div class="fill" style="width:15.4%"></div></div>
       <div class="val">15,4% · 13</div></div><div class="row" data-k="ОСАГО" title="ОСАГО: одна заявка в 0 из 9 закупок">
@@ -286,373 +284,373 @@ a.cust:hover{color:var(--accent-ink)}
         <div><div class="note" style="margin:0 0 6px">Сколько заявок подано, число закупок</div><div class="barlist" id="compDist"><div class="row" data-k="1 заявка" title="">
       <div class="name">1 заявка</div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
-      <div class="val">59</div></div><div class="row" data-k="2 заявки" title="">
+      <div class="val">57</div></div><div class="row" data-k="2 заявки" title="">
       <div class="name">2 заявки</div>
-      <div class="track"><div class="fill" style="width:84.7%"></div></div>
+      <div class="track"><div class="fill" style="width:87.7%"></div></div>
       <div class="val">50</div></div><div class="row" data-k="3 заявки" title="">
       <div class="name">3 заявки</div>
-      <div class="track"><div class="fill" style="width:28.8%"></div></div>
+      <div class="track"><div class="fill" style="width:29.8%"></div></div>
       <div class="val">17</div></div><div class="row" data-k="4 заявки" title="">
       <div class="name">4 заявки</div>
-      <div class="track"><div class="fill" style="width:23.7%"></div></div>
+      <div class="track"><div class="fill" style="width:24.6%"></div></div>
       <div class="val">14</div></div><div class="row" data-k="5 и больше заявки" title="">
       <div class="name">5 и больше заявки</div>
-      <div class="track"><div class="fill" style="width:35.6%"></div></div>
+      <div class="track"><div class="fill" style="width:36.8%"></div></div>
       <div class="val">21</div></div></div></div>
       </div>
     </div>
 
     <div class="card" id="calCard">
       <h2>Скоро на торги: у кого заканчивается договор</h2>
-      <div class="note" id="calNote" style="margin:-4px 0 8px">Закупки, которые по прошлогоднему графику выйдут на торги до 20.01.2027, и кто держит договор сейчас.</div>
-      <ul class="insights" id="calFacts"><li>Ожидается закупок: 1&nbsp;951, на 13,6 млрд ₽ по прошлогодним начальным ценам.</li><li>Кто держит договор, известно для 936 из них — это 13,1% денег. Держатель известен по 44-ФЗ; по 223-ФЗ победители в протоколах ЕИС обезличены.</li><li>Уже объявлены заново и в список не вошли: 337.</li></ul>
+      <div class="note" id="calNote" style="margin:-4px 0 8px">Закупки, которые по прошлогоднему графику выйдут на торги до 22.01.2027, и кто держит договор сейчас.</div>
+      <ul class="insights" id="calFacts"><li>Ожидается закупок: 1&nbsp;776, на 13,4 млрд ₽ по прошлогодним начальным ценам.</li><li>Кто держит договор, известно для 939 из них — это 13,3% денег. Держатель известен по 44-ФЗ; по 223-ФЗ победители в протоколах ЕИС обезличены.</li><li>Уже объявлены заново и в список не вошли: 295.</li></ul>
       <div class="grid2" style="margin-top:12px">
         <div><div class="note" style="margin:0 0 6px">По месяцам: число закупок · прошлогодняя начальная цена</div><div class="barlist" id="calMonths"><div class="row" data-k="октябрь 2026" title="">
       <div class="name">октябрь 2026</div>
-      <div class="track"><div class="fill" style="width:15.9%"></div></div>
-      <div class="val">210 · 1,2 млрд ₽</div></div><div class="row" data-k="ноябрь 2026" title="">
+      <div class="track"><div class="fill" style="width:13.6%"></div></div>
+      <div class="val">138 · 984,3 млн ₽</div></div><div class="row" data-k="ноябрь 2026" title="">
       <div class="name">ноябрь 2026</div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
-      <div class="val">754 · 7,3 млрд ₽</div></div><div class="row" data-k="декабрь 2026" title="">
+      <div class="val">705 · 7,2 млрд ₽</div></div><div class="row" data-k="декабрь 2026" title="">
       <div class="name">декабрь 2026</div>
-      <div class="track"><div class="fill" style="width:64.5%"></div></div>
-      <div class="val">915 · 4,7 млрд ₽</div></div><div class="row" data-k="январь 2027" title="">
+      <div class="track"><div class="fill" style="width:63.9%"></div></div>
+      <div class="val">830 · 4,6 млрд ₽</div></div><div class="row" data-k="январь 2027" title="">
       <div class="name">январь 2027</div>
-      <div class="track"><div class="fill" style="width:7.6%"></div></div>
-      <div class="val">72 · 551,7 млн ₽</div></div></div></div>
+      <div class="track"><div class="fill" style="width:8.5%"></div></div>
+      <div class="val">103 · 612,3 млн ₽</div></div></div></div>
         <div><div class="note" style="margin:0 0 6px">Кто сейчас держит эти договоры <span class="js-only">· нажмите, чтобы оставить только его</span></div><div class="barlist" id="calHolders"><div class="row" data-k="САО &quot;РЕСО-ГАРАНТИЯ&quot;" title="САО &quot;РЕСО-ГАРАНТИЯ&quot;: 19 договоров на 461,3 млн ₽">
       <div class="name">САО "РЕСО-ГАРАНТИЯ"</div>
       <div class="track"><div class="fill" style="width:100.0%"></div></div>
-      <div class="val">19 · 461,3 млн ₽</div></div><div class="row" data-k="АО &quot;СОГАЗ&quot;" title="АО &quot;СОГАЗ&quot;: 122 договоров на 86,6 млн ₽">
+      <div class="val">19 · 461,3 млн ₽</div></div><div class="row" data-k="АО &quot;СОГАЗ&quot;" title="АО &quot;СОГАЗ&quot;: 123 договоров на 86,4 млн ₽">
       <div class="name">АО "СОГАЗ"</div>
-      <div class="track"><div class="fill" style="width:18.8%"></div></div>
-      <div class="val">122 · 86,6 млн ₽</div></div><div class="row" data-k="САО &quot;ВСК&quot;" title="САО &quot;ВСК&quot;: 174 договоров на 80,5 млн ₽">
+      <div class="track"><div class="fill" style="width:18.7%"></div></div>
+      <div class="val">123 · 86,4 млн ₽</div></div><div class="row" data-k="САО &quot;ВСК&quot;" title="САО &quot;ВСК&quot;: 176 договоров на 83,7 млн ₽">
       <div class="name">САО "ВСК"</div>
-      <div class="track"><div class="fill" style="width:17.5%"></div></div>
-      <div class="val">174 · 80,5 млн ₽</div></div><div class="row" data-k="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;" title="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;: 1 договоров на 48,6 млн ₽">
+      <div class="track"><div class="fill" style="width:18.1%"></div></div>
+      <div class="val">176 · 83,7 млн ₽</div></div><div class="row" data-k="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;" title="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;: 1 договоров на 48,6 млн ₽">
       <div class="name">ООО "КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ"</div>
       <div class="track"><div class="fill" style="width:10.5%"></div></div>
       <div class="val">1 · 48,6 млн ₽</div></div><div class="row" data-k="ООО СК &quot;СБЕРБАНК СТРАХОВАНИЕ&quot;" title="ООО СК &quot;СБЕРБАНК СТРАХОВАНИЕ&quot;: 9 договоров на 47,6 млн ₽">
       <div class="name">ООО СК "СБЕРБАНК СТРАХОВАНИЕ"</div>
       <div class="track"><div class="fill" style="width:10.3%"></div></div>
-      <div class="val">9 · 47,6 млн ₽</div></div><div class="row" data-k="ООО &quot;АМТ СТРАХОВАНИЕ&quot;" title="ООО &quot;АМТ СТРАХОВАНИЕ&quot;: 6 договоров на 46,8 млн ₽">
+      <div class="val">9 · 47,6 млн ₽</div></div><div class="row" data-k="ООО &quot;АМТ СТРАХОВАНИЕ&quot;" title="ООО &quot;АМТ СТРАХОВАНИЕ&quot;: 5 договоров на 46 млн ₽">
       <div class="name">ООО "АМТ СТРАХОВАНИЕ"</div>
-      <div class="track"><div class="fill" style="width:10.1%"></div></div>
-      <div class="val">6 · 46,8 млн ₽</div></div><div class="row" data-k="СПАО &quot;ИНГОССТРАХ&quot;" title="СПАО &quot;ИНГОССТРАХ&quot;: 210 договоров на 38,5 млн ₽">
+      <div class="track"><div class="fill" style="width:10.0%"></div></div>
+      <div class="val">5 · 46 млн ₽</div></div><div class="row" data-k="СПАО &quot;ИНГОССТРАХ&quot;" title="СПАО &quot;ИНГОССТРАХ&quot;: 215 договоров на 38,7 млн ₽">
       <div class="name">СПАО "ИНГОССТРАХ"</div>
-      <div class="track"><div class="fill" style="width:8.3%"></div></div>
-      <div class="val">210 · 38,5 млн ₽</div></div><div class="row" data-k="АО &quot;МАКС&quot;" title="АО &quot;МАКС&quot;: 4 договоров на 25,1 млн ₽">
+      <div class="track"><div class="fill" style="width:8.4%"></div></div>
+      <div class="val">215 · 38,7 млн ₽</div></div><div class="row" data-k="АО &quot;МАКС&quot;" title="АО &quot;МАКС&quot;: 4 договоров на 25,1 млн ₽">
       <div class="name">АО "МАКС"</div>
       <div class="track"><div class="fill" style="width:5.4%"></div></div>
       <div class="val">4 · 25,1 млн ₽</div></div></div></div>
       </div>
       <div style="margin:14px 0 4px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center">
         <label class="chk js-only" style="display:flex"><input type="checkbox" id="calKnown"> только где известен держатель</label>
-        <span class="note" id="calShown" style="margin:0">Показаны 50 крупнейших из 1&nbsp;951, весь список — в CSV.</span>
+        <span class="note" id="calShown" style="margin:0">Показаны 50 крупнейших из 1&nbsp;776, весь список — в CSV.</span>
       </div>
-      <div class="tablewrap"><table id="cal"><tbody><tr><th>Ожидается</th><th>Вид</th><th>Заказчик</th><th>Прошлая закупка</th><th class="n">Цена год назад</th><th>Держит договор</th></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 28 дн.</span></td>
+      <div class="tablewrap"><table id="cal"><tbody><tr><th>Ожидается</th><th>Вид</th><th>Заказчик</th><th>Прошлая закупка</th><th class="n">Цена год назад</th><th>Держит договор</th></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 26 дн.</span></td>
       <td>НС и личное страхование</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ">ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0173100007925000092" target="_blank" rel="noopener">услуги по обязательному государственному страхованию жизни и здоровья сотрудников учреждений и органов уголовн</a><br><span class="note">44-ФЗ, объявлена 19.11.2025</span></td>
       <td class="n">1,7 млрд ₽</td>
-      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 43 дн.</span></td>
+      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 41 дн.</span></td>
       <td>ОСАГО</td><td><a href="#" class="cust" data-cust="ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ">ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0173200001425001946" target="_blank" rel="noopener">Открытый конкурс в электронной форме на право заключения контракта на оказание услуг по обязательному страхова</a><br><span class="note">44-ФЗ, объявлена 04.12.2025</span></td>
       <td class="n">1 млрд ₽<br><span class="note">договор 459,7 млн ₽</span></td>
-      <td>САО "РЕСО-ГАРАНТИЯ"</td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 14.11.2026</span><br><span class="note">через 23 дн.</span></td>
+      <td><a href="#" class="cust" data-ins="САО &quot;РЕСО-ГАРАНТИЯ&quot;">САО "РЕСО-ГАРАНТИЯ"</a></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 14.11.2026</span><br><span class="note">через 21 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФОРВАРД ЭНЕРГО&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФОРВАРД ЭНЕРГО"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515404121" target="_blank" rel="noopener">Страхование имущества, машин и оборудования Заказчика от всех рисков физической гибели, утраты, повреждения, п</a><br><span class="note">223-ФЗ, объявлена 14.11.2025</span></td>
       <td class="n">997,3 млн ₽<br><span class="note">договор 995,6 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 3</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 34 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 3</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 32 дн.</span></td>
       <td>НС и личное страхование</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;Т ПЛЮС&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "Т ПЛЮС"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515446764" target="_blank" rel="noopener">Заключение договоров страхования в 2026 году (страхование имущества, страхование ответственности, личное страх</a><br><span class="note">223-ФЗ, объявлена 25.11.2025</span></td>
       <td class="n">592,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 43 дн.</span></td>
-      <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 41 дн.</span></td>
+      <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373100086925000702" target="_blank" rel="noopener">Оказание услуг по техническому обслуживанию, поддержанию летной годности, базированию, сохранности и летно-тех</a><br><span class="note">44-ФЗ, объявлена 04.12.2025</span></td>
       <td class="n">486,8 млн ₽</td>
-      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 16.01.2027</span><br><span class="note">через 86 дн.</span></td>
+      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 16.01.2027</span><br><span class="note">через 84 дн.</span></td>
       <td>Ответственность</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;РОСМОРПОРТ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "РОСМОРПОРТ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32615612015" target="_blank" rel="noopener">Запрос предложений в электронной форме (№ ЦА 75-25) по выбору организации на право заключения договора страхов</a><br><span class="note">223-ФЗ, объявлена 16.01.2026</span></td>
       <td class="n">457,5 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 27.11.2026</span><br><span class="note">через 36 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 27.11.2026</span><br><span class="note">через 34 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515460488" target="_blank" rel="noopener">КО №2829/КО - Добровольное медицинское страхование (D26P100812)</a><br><span class="note">223-ФЗ, объявлена 27.11.2025</span></td>
-      <td class="n">444,2 млн ₽<br><span class="note">договор 372,1 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 30.10.2026</span><br><span class="note">через 8 дн.</span></td>
+      <td class="n">444,2 млн ₽<br><span class="note">договор 372,1 млн ₽ (−16,2%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 30.10.2026</span><br><span class="note">через 6 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515358294" target="_blank" rel="noopener">КО №2999/КО - Страхование имущества (D26P100358)</a><br><span class="note">223-ФЗ, объявлена 30.10.2025</span></td>
       <td class="n">436,3 млн ₽<br><span class="note">договор 436,3 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 28 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 26 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РИР ЭНЕРГО&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РИР ЭНЕРГО"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515419121" target="_blank" rel="noopener">Услуги добровольного медицинского страхования</a><br><span class="note">223-ФЗ, объявлена 19.11.2025</span></td>
       <td class="n">341,6 млн ₽<br><span class="note">договор 341,4 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 12.12.2026</span><br><span class="note">через 51 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ЭЛЕКТРИЧЕСКОГО ТРАНСПОРТА">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ЭЛЕКТРИЧЕСКОГО ТРАНСП</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 12.12.2026</span><br><span class="note">через 49 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ЭЛЕКТРИЧЕСКОГО ТРАНСПОРТА">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ЭЛЕКТРИЧЕСКОГО ТРАНСПОРТА</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515528393" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников СПб ГУП "Горэлектротранс"</a><br><span class="note">223-ФЗ, объявлена 12.12.2025</span></td>
       <td class="n">287,3 млн ₽<br><span class="note">договор 287,3 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 34 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 32 дн.</span></td>
       <td>Строительно-монтажные риски</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ГАЗПРОМ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ГАЗПРОМ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515447205" target="_blank" rel="noopener">Услуги страхования строительно-монтажных рисков для нужд Компаний Группы Газпром ПАО "Газпром" в 2026-2027 гг.</a><br><span class="note">223-ФЗ, объявлена 25.11.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">257,7 млн ₽<br><span class="note">договор 257,7 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 05.12.2026</span><br><span class="note">через 44 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 05.12.2026</span><br><span class="note">через 42 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ГТЛК-1520&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ГТЛК-1520"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515496220" target="_blank" rel="noopener">Оказание услуг по страхованию имущества (средства железнодорожного транспорта)</a><br><span class="note">223-ФЗ, объявлена 05.12.2025</span></td>
       <td class="n">253,2 млн ₽<br><span class="note">договор 253,2 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 03.12.2026</span><br><span class="note">через 42 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 03.12.2026</span><br><span class="note">через 40 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ДОМ.РФ ИПОТЕЧНЫЙ АГЕНТ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ДОМ.РФ ИПОТЕЧНЫЙ АГЕНТ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515483147" target="_blank" rel="noopener">Оказание услуг по страхованию недвижимого имущества, заложенного в обеспечение исполнения обязательств по закл</a><br><span class="note">223-ФЗ, объявлена 03.12.2025</span></td>
       <td class="n">240,1 млн ₽<br><span class="note">договор 240,1 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 20.11.2026</span><br><span class="note">через 29 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 20.11.2026</span><br><span class="note">через 27 дн.</span></td>
       <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515428888" target="_blank" rel="noopener">право заключения договоров добровольного страхования транспортных средств (КАСКО) для нужд ПАО «Россети»</a><br><span class="note">223-ФЗ, объявлена 20.11.2025</span></td>
       <td class="n">191,1 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 17.11.2026</span><br><span class="note">через 26 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 17.11.2026</span><br><span class="note">через 24 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТОПЛИВНО-ЭНЕРГЕТИЧЕСКИЙ КОМПЛЕКС САНКТ-ПЕТЕРБУРГА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ТОПЛИВНО-ЭНЕРГЕТИЧЕСКИЙ КОМПЛЕКС САНКТ-ПЕТЕРБУРГА"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515410561" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию</a><br><span class="note">223-ФЗ, объявлена 17.11.2025</span></td>
       <td class="n">163,4 млн ₽<br><span class="note">договор 163,2 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 68 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ &quot;ГОСУДАРСТВЕННЫЙ АКАДЕМИЧЕСКИЙ МАРИИНСКИЙ ТЕАТР&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ "ГОСУДАРСТВЕННЫЙ АКАДЕМИЧЕСКИЙ М</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 66 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ &quot;ГОСУДАРСТВЕННЫЙ АКАДЕМИЧЕСКИЙ МАРИИНСКИЙ ТЕАТР&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ "ГОСУДАРСТВЕННЫЙ АКАДЕМИЧЕСКИЙ МАРИИНСКИЙ ТЕАТР"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515590965" target="_blank" rel="noopener">открытый конкурс в электронной форме на право заключения гражданско-правового договора бюджетного учреждения (</a><br><span class="note">223-ФЗ, объявлена 29.12.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">127 млн ₽<br><span class="note">договор 127 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 28.10.2026</span><br><span class="note">через 6 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 28.10.2026</span><br><span class="note">через 4 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;АТОМСПЕЦТРАНС&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "АТОМСПЕЦТРАНС"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515345112" target="_blank" rel="noopener">Право заключения договора на оказание услуг добровольного медицинского страхования работников на 2026 - 2027 г</a><br><span class="note">223-ФЗ, объявлена 28.10.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">118,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 28.11.2026</span><br><span class="note">через 37 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 28.11.2026</span><br><span class="note">через 35 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РЕГИОНАЛЬНЫЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РЕГИОНАЛЬНЫЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515463582" target="_blank" rel="noopener">Право заключения договора на оказание услуг добровольного медицинского страхования</a><br><span class="note">223-ФЗ, объявлена 28.11.2025</span></td>
       <td class="n">112,4 млн ₽<br><span class="note">договор 112,1 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 27 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 25 дн.</span></td>
       <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;АРКТИКМОРНЕФТЕГАЗРАЗВЕДКА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "АРКТИКМОРНЕФТЕГАЗРАЗВЕДКА"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515413581" target="_blank" rel="noopener">Страхование КАСКО и ответственности судовладельца СПБУ «SinoOcean Jade» с 04.12.2025 по 03.12.2026 в соответст</a><br><span class="note">223-ФЗ, объявлена 18.11.2025</span></td>
-      <td class="n">101,9 млн ₽<br><span class="note">договор 99,9 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 01.12.2026</span><br><span class="note">через 40 дн.</span></td>
+      <td class="n">101,9 млн ₽<br><span class="note">договор 99,9 млн ₽ (−2%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 01.12.2026</span><br><span class="note">через 38 дн.</span></td>
       <td>Строительно-монтажные риски</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МЕТРОСТРОЙ СЕВЕРНОЙ СТОЛИЦЫ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МЕТРОСТРОЙ СЕВЕРНОЙ СТОЛИЦЫ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515474801" target="_blank" rel="noopener">Оказание услуг по комплексному страхованию всех строительно-монтажных рисков и ответственности перед третьими </a><br><span class="note">223-ФЗ, объявлена 01.12.2025</span></td>
-      <td class="n">100,6 млн ₽<br><span class="note">договор 95,6 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 09.12.2026</span><br><span class="note">через 48 дн.</span></td>
+      <td class="n">100,6 млн ₽<br><span class="note">договор 95,6 млн ₽ (−5%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 09.12.2026</span><br><span class="note">через 46 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ГЭХ ФИНАНС&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ГЭХ ФИНАНС"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515509930" target="_blank" rel="noopener">Добровольное медицинское страхование</a><br><span class="note">223-ФЗ, объявлена 09.12.2025</span></td>
       <td class="n">92 млн ₽<br><span class="note">договор 92 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 16.12.2026</span><br><span class="note">через 55 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГОСУДАРСТВЕННАЯ КОРПОРАЦИЯ ПО ОРГАНИЗАЦИИ ВОЗДУШНОГО ДВИЖЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГОСУДАРСТВЕННАЯ КОРПОРАЦИЯ ПО ОРГАНИЗАЦ</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 16.12.2026</span><br><span class="note">через 53 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГОСУДАРСТВЕННАЯ КОРПОРАЦИЯ ПО ОРГАНИЗАЦИИ ВОЗДУШНОГО ДВИЖЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГОСУДАРСТВЕННАЯ КОРПОРАЦИЯ ПО ОРГАНИЗАЦИИ ВОЗДУШНОГО ДВИЖЕНИЯ В РОССИЙСКОЙ ФЕДЕРАЦИИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515539151" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников филиала «МЦ АУВД» ФГУП «Госкорпорация по О</a><br><span class="note">223-ФЗ, объявлена 16.12.2025</span></td>
       <td class="n">91,2 млн ₽<br><span class="note">договор 39 тыс. ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 28 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 26 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;СЕВЕРНЕФТЕГАЗПРОМ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СЕВЕРНЕФТЕГАЗПРОМ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515419927" target="_blank" rel="noopener">Оказание услуг по страхованию объектов имущественного комплекса для нужд ООО "Севернефтегазпром" (117578)</a><br><span class="note">223-ФЗ, объявлена 19.11.2025</span></td>
       <td class="n">85,5 млн ₽<br><span class="note">договор 85,5 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 08.12.2026</span><br><span class="note">через 47 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 08.12.2026</span><br><span class="note">через 45 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;БАШКИРСКАЯ ЭЛЕКТРОСЕТЕВАЯ КОМПАНИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "БАШКИРСКАЯ ЭЛЕКТРОСЕТЕВАЯ КОМПАНИЯ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515499571" target="_blank" rel="noopener">Добровольное медицинское страхование ООО "Башкирэнерго", ООО "БСК", ООО "БЭСК Инжиниринг" 26-000148 (4263725)</a><br><span class="note">223-ФЗ, объявлена 08.12.2025</span></td>
       <td class="n">85,3 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 15.12.2026</span><br><span class="note">через 54 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОСУДАРСТВЕННЫЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ГРАЖДАНСКОЙ АВИАЦИИ">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОСУДАРСТВЕННЫЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 15.12.2026</span><br><span class="note">через 52 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОСУДАРСТВЕННЫЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ГРАЖДАНСКОЙ АВИАЦИИ">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ГОСУДАРСТВЕННЫЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ГРАЖДАНСКОЙ АВИАЦИИ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515533146" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников</a><br><span class="note">223-ФЗ, объявлена 15.12.2025</span></td>
       <td class="n">80,4 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 30 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 4</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 28 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОСАТОМ ВОЗОБНОВЛЯЕМАЯ ЭНЕРГИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РОСАТОМ ВОЗОБНОВЛЯЕМАЯ ЭНЕРГИЯ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515434358" target="_blank" rel="noopener">Право заключения договора на оказание услуг добровольного медицинского страхования работников акционерного общ</a><br><span class="note">223-ФЗ, объявлена 21.11.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">63,6 млн ₽<br><span class="note">договор 65,9 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 30 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 28 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕПЛОСЕТЬ САНКТ-ПЕТЕРБУРГА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕПЛОСЕТЬ САНКТ-ПЕТЕРБУРГА"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515433995" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию (4444/7.12.33-246)</a><br><span class="note">223-ФЗ, объявлена 21.11.2025</span></td>
       <td class="n">62,9 млн ₽<br><span class="note">договор 62,9 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 03.12.2026</span><br><span class="note">через 42 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 03.12.2026</span><br><span class="note">через 40 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ЭНЕРГОСБЫТ ДОНЕЦК&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭНЕРГОСБЫТ ДОНЕЦК"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515483014" target="_blank" rel="noopener">Право заключения договора на добровольное медицинское страхование для работников ООО "Энергосбыт Донецк" в 202</a><br><span class="note">223-ФЗ, объявлена 03.12.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">57,8 млн ₽<br><span class="note">договор 57,7 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 23.12.2026</span><br><span class="note">через 62 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 23.12.2026</span><br><span class="note">через 60 дн.</span></td>
       <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ЭКОЛОГИЧЕСКИЕ ПРОЕКТЫ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭКОЛОГИЧЕСКИЕ ПРОЕКТЫ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515567312" target="_blank" rel="noopener">Оказание услуг по комплексному добровольному страхованию транспортных средств и установленного на них дополнит</a><br><span class="note">223-ФЗ, объявлена 23.12.2025</span></td>
-      <td class="n">57 млн ₽<br><span class="note">договор 25,4 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 29.10.2026</span><br><span class="note">через 7 дн.</span></td>
+      <td class="n">57 млн ₽<br><span class="note">договор 25,4 млн ₽ (−55,5%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 29.10.2026</span><br><span class="note">через 5 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="КОМИТЕТ ПО ОРГАНИЗАЦИИ ТОРГОВ САМАРСКОЙ ОБЛАСТИ">КОМИТЕТ ПО ОРГАНИЗАЦИИ ТОРГОВ САМАРСКОЙ ОБЛАСТИ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0142200001325024277" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию лиц, замещающих государственные должности Самарской о</a><br><span class="note">44-ФЗ, объявлена 29.10.2025</span></td>
-      <td class="n">55,4 млн ₽<br><span class="note">договор 48,6 млн ₽</span></td>
-      <td>ООО "КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ"</td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 22.12.2026</span><br><span class="note">через 61 дн.</span></td>
+      <td class="n">55,4 млн ₽<br><span class="note">договор 48,6 млн ₽ (−12,3%)</span></td>
+      <td><a href="#" class="cust" data-ins="ООО &quot;КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ&quot;">ООО "КАПИТАЛ ЛАЙФ СТРАХОВАНИЕ ЖИЗНИ"</a></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 22.12.2026</span><br><span class="note">через 59 дн.</span></td>
       <td>Опасные объекты</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ВОДОХОЗЯЙСТВЕННОЕ УЧРЕЖДЕНИЕ &quot;ЦЕНТРРЕГИОНВОДХОЗ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ВОДОХОЗЯЙСТВЕННОЕ УЧРЕЖДЕНИЕ "ЦЕНТРРЕГИОНВОДХОЗ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373100089325000101" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца опасного объекта за причинен</a><br><span class="note">44-ФЗ, объявлена 22.12.2025</span></td>
-      <td class="n">52 млн ₽<br><span class="note">договор 39,1 млн ₽</span></td>
-      <td>АО "СОГАЗ"</td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 02.12.2026</span><br><span class="note">через 41 дн.</span></td>
+      <td class="n">52 млн ₽<br><span class="note">договор 39,1 млн ₽ (−24,8%)</span></td>
+      <td><a href="#" class="cust" data-ins="АО &quot;СОГАЗ&quot;">АО "СОГАЗ"</a></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 02.12.2026</span><br><span class="note">через 39 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ПЕТЕРБУРГГАЗ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПЕТЕРБУРГГАЗ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515480400" target="_blank" rel="noopener">Отбор организации для оказания финансовых услуг по добровольному медицинскому страхованию сотрудников ООО «Пет</a><br><span class="note">223-ФЗ, объявлена 02.12.2025</span></td>
-      <td class="n">51,9 млн ₽<br><span class="note">договор 50,4 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 28 дн.</span></td>
+      <td class="n">51,9 млн ₽<br><span class="note">договор 50,4 млн ₽ (−2,9%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 26 дн.</span></td>
       <td>ОСАГО</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515422954" target="_blank" rel="noopener">Право заключения договоров обязательного страхования гражданской ответственности владельцев транспортных средс</a><br><span class="note">223-ФЗ, объявлена 19.11.2025</span></td>
       <td class="n">51,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 68 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 6</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 66 дн.</span></td>
       <td>НС и личное страхование</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА">ФЕДЕРАЛЬНАЯ НАЛОГОВАЯ СЛУЖБА</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0173100007825000063" target="_blank" rel="noopener">Оказание услуг по обязательному государственному личному страхованию работников ФНС России</a><br><span class="note">44-ФЗ, объявлена 29.12.2025</span></td>
       <td class="n">51,4 млн ₽</td>
-      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 30.12.2026</span><br><span class="note">через 69 дн.</span></td>
+      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 30.12.2026</span><br><span class="note">через 67 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ИНТЕР РАО-ЦЕНТР УПРАВЛЕНИЯ ЗАКУПКАМИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515592599" target="_blank" rel="noopener">221883_Добровольное страхование имущества для Обществ Группы «Интер РАО»</a><br><span class="note">223-ФЗ, объявлена 30.12.2025</span></td>
-      <td class="n">49,9 млн ₽<br><span class="note">договор 46,1 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 27 дн.</span></td>
+      <td class="n">49,9 млн ₽<br><span class="note">договор 46,1 млн ₽ (−7,7%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 25 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;УПРАВЛЕНИЕ НЕДВИЖИМОСТЬЮ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "УПРАВЛЕНИЕ НЕДВИЖИМОСТЬЮ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515417038" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию</a><br><span class="note">223-ФЗ, объявлена 18.11.2025</span></td>
       <td class="n">49,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 27 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 18.11.2026</span><br><span class="note">через 25 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ГАЗПРОМ ДОБЫЧА ТОМСК&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ГАЗПРОМ ДОБЫЧА ТОМСК"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515415032" target="_blank" rel="noopener">Оказание услуг по страхованию имущества на 2026-2028 годы</a><br><span class="note">223-ФЗ, объявлена 18.11.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">49,2 млн ₽<br><span class="note">договор 49,2 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 28.11.2026</span><br><span class="note">через 37 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ТЕЛЕВИЗИОННЫЙ ТЕХНИЧЕСКИЙ ЦЕНТР &quot;ОСТАНКИНО&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ТЕЛЕВИЗИОННЫЙ ТЕХНИЧЕСКИЙ ЦЕНТР "ОСТАНК</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 28.11.2026</span><br><span class="note">через 35 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ТЕЛЕВИЗИОННЫЙ ТЕХНИЧЕСКИЙ ЦЕНТР &quot;ОСТАНКИНО&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ТЕЛЕВИЗИОННЫЙ ТЕХНИЧЕСКИЙ ЦЕНТР "ОСТАНКИНО"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515468312" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников и ветеранов ФГУП «ТТЦ "Останкино"</a><br><span class="note">223-ФЗ, объявлена 28.11.2025</span></td>
       <td class="n">48,2 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 3</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 27.11.2026</span><br><span class="note">через 36 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ &quot;НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И ПРОЕКТНЫЙ ИНСТИТУТ ГЕНЕРАЛЬНОГО ПЛАНА ГОРОДА МОСКВЫ&quot;">ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ "НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И ПРОЕКТНЫЙ </a></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 3</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 27.11.2026</span><br><span class="note">через 34 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ &quot;НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И ПРОЕКТНЫЙ ИНСТИТУТ ГЕНЕРАЛЬНОГО ПЛАНА ГОРОДА МОСКВЫ&quot;">ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ "НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И ПРОЕКТНЫЙ ИНСТИТУТ ГЕНЕРАЛЬНОГО ПЛАНА ГОРОДА МОСКВЫ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515456510" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию для нужд ГАУ «Институт Генплана Москвы»</a><br><span class="note">223-ФЗ, объявлена 27.11.2025</span></td>
       <td class="n">46,4 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 5</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 17.11.2026</span><br><span class="note">через 26 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 5</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 17.11.2026</span><br><span class="note">через 24 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ТЕПЛОСНАБЖАЮЩАЯ КОМПАНИЯ МОСЭНЕРГО&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТЕПЛОСНАБЖАЮЩАЯ КОМПАНИЯ МОСЭНЕРГО"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515408854" target="_blank" rel="noopener">КО №1024 (001-ТД-ИП-2026-ЦЗ-УРП-ВП) - Оказание услуг добровольного медицинского страхования для нужд ООО "ТСК </a><br><span class="note">223-ФЗ, объявлена 17.11.2025</span></td>
       <td class="n">46,3 млн ₽<br><span class="note">договор 46,3 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 43 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 04.12.2026</span><br><span class="note">через 41 дн.</span></td>
       <td>ОСАГО</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ЭКОЛАЙФ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭКОЛАЙФ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515491307" target="_blank" rel="noopener">Оказание услуг обязательного страхования гражданской ответственности владельцев транспортных средств (ОСАГО)</a><br><span class="note">223-ФЗ, объявлена 04.12.2025</span></td>
       <td class="n">44 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 34 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 32 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="СУРГУТСКОЕ ГОРОДСКОЕ МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГОРОДСКИЕ ТЕПЛОВЫЕ СЕТИ&quot;">СУРГУТСКОЕ ГОРОДСКОЕ МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГОРОДСКИЕ ТЕПЛОВЫЕ СЕТИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515444467" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию</a><br><span class="note">223-ФЗ, объявлена 25.11.2025</span></td>
       <td class="n">42,7 млн ₽<br><span class="note">договор 42,7 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days soon">≈ 23.10.2026</span><br><span class="note">через 1 дн.</span></td>
-      <td>КАСКО и транспорт</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ЭКОЛАЙФ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЭКОЛАЙФ"</a></td>
-      <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515332335" target="_blank" rel="noopener">Оказание услуг по добровольному комплексному страхованию (КАСКО и ДГО) транспортных средств</a><br><span class="note">223-ФЗ, объявлена 23.10.2025</span></td>
-      <td class="n">42,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 7</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 30 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 21.11.2026</span><br><span class="note">через 28 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №2&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №2"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515434214" target="_blank" rel="noopener">Страхование имущества, машин и оборудования от поломок</a><br><span class="note">223-ФЗ, объявлена 21.11.2025</span></td>
-      <td class="n">42,6 млн ₽<br><span class="note">договор 40 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 68 дн.</span></td>
+      <td class="n">42,6 млн ₽<br><span class="note">договор 40 млн ₽ (−6%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 29.12.2026</span><br><span class="note">через 66 дн.</span></td>
       <td>Имущество</td><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ &quot;ДИРЕКЦИЯ ТРАНСПОРТНЫХ ЗАКУПОК&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ "ДИРЕКЦИЯ ТРАНСПОРТНЫХ ЗАКУПОК"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373200082125000924" target="_blank" rel="noopener">Оказание услуг по страхованию недвижимого имущества ГУП «Московский метрополитен» в 2026-2027 гг.</a><br><span class="note">44-ФЗ, объявлена 29.12.2025 · в предмете два года — договор может быть многолетним</span></td>
-      <td class="n">42,5 млн ₽<br><span class="note">договор 36,6 млн ₽</span></td>
-      <td>ООО СК "СБЕРБАНК СТРАХОВАНИЕ"</td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 34 дн.</span></td>
+      <td class="n">42,5 млн ₽<br><span class="note">договор 36,6 млн ₽ (−14%)</span></td>
+      <td><a href="#" class="cust" data-ins="ООО СК &quot;СБЕРБАНК СТРАХОВАНИЕ&quot;">ООО СК "СБЕРБАНК СТРАХОВАНИЕ"</a></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 25.11.2026</span><br><span class="note">через 32 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;УПРАВЛЕНИЕ АДМИНИСТРАТИВНЫМИ ЗДАНИЯМИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "УПРАВЛЕНИЕ АДМИНИСТРАТИВНЫМИ ЗДАНИЯМИ"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515445918" target="_blank" rel="noopener">Право заключения договора на оказание услуг добровольного медицинского страхования и страхования от несчастных</a><br><span class="note">223-ФЗ, объявлена 25.11.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">42,4 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 24.12.2026</span><br><span class="note">через 63 дн.</span></td>
-      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ &quot;ФЕДЕРАЛЬНЫЙ НАУЧНЫЙ ЦЕНТР ГИГИЕНЫ ИМ. Ф.Ф. ЭРИСМАНА&quot; ФЕДЕРАЛЬНОЙ СЛУЖБЫ ПО НАДЗОРУ В СФЕРЕ ЗАЩИТЫ ПРАВ ПОТРЕБИТЕЛЕЙ И БЛАГОПОЛУЧИЯ ЧЕЛОВЕКА">ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ "ФЕДЕРАЛЬНЫЙ НАУЧНЫЙ ЦЕНТР ГИГИЕНЫ ИМ. Ф.Ф. ЭРИСМАН</a></td>
+      <td><span class="note">не раскрыт (223-ФЗ)</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 24.12.2026</span><br><span class="note">через 61 дн.</span></td>
+      <td>ДМС</td><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ &quot;ФЕДЕРАЛЬНЫЙ НАУЧНЫЙ ЦЕНТР ГИГИЕНЫ ИМ. Ф.Ф. ЭРИСМАНА&quot; ФЕДЕРАЛЬНОЙ СЛУЖБЫ ПО НАДЗОРУ В СФЕРЕ ЗАЩИТЫ ПРАВ ПОТРЕБИТЕЛЕЙ И БЛАГОПОЛУЧИЯ ЧЕЛОВЕКА">ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ "ФЕДЕРАЛЬНЫЙ НАУЧНЫЙ ЦЕНТР ГИГИЕНЫ ИМ. Ф.Ф. ЭРИСМАНА" ФЕДЕРАЛЬНОЙ СЛУЖБЫ ПО НАДЗОРУ В СФЕРЕ ЗАЩИТЫ ПРАВ ПОТРЕБИТЕЛЕЙ И БЛ</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515571794" target="_blank" rel="noopener">оказание услуг по добровольному медицинскому страхованию работников ФБУН «ФНЦГ им. Ф.Ф. Эрисмана» Роспотребнад</a><br><span class="note">223-ФЗ, объявлена 24.12.2025</span></td>
-      <td class="n">42,1 млн ₽<br><span class="note">договор 35 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 08.12.2026</span><br><span class="note">через 47 дн.</span></td>
+      <td class="n">42,1 млн ₽<br><span class="note">договор 35 млн ₽ (−16,9%)</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 08.12.2026</span><br><span class="note">через 45 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;КАЛИНИНСКАЯ АЭС-СЕРВИС&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "КАЛИНИНСКАЯ АЭС-СЕРВИС"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515499179" target="_blank" rel="noopener">Право заключения договора на оказание услуги по предоставлению добровольное медицинское страхование для работн</a><br><span class="note">223-ФЗ, объявлена 08.12.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">40 млн ₽<br><span class="note">договор 40 млн ₽</span></td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 10.12.2026</span><br><span class="note">через 49 дн.</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 1</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 10.12.2026</span><br><span class="note">через 47 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ЗАКОНОДАТЕЛЬНОЕ СОБРАНИЕ САНКТ-ПЕТЕРБУРГА">ЗАКОНОДАТЕЛЬНОЕ СОБРАНИЕ САНКТ-ПЕТЕРБУРГА</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0172200006025000192" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию лиц, замещающих государственные должности, и государс</a><br><span class="note">44-ФЗ, объявлена 10.12.2025</span></td>
       <td class="n">39,8 млн ₽</td>
-      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 28 дн.</span></td>
+      <td><span class="note">нет данных</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 19.11.2026</span><br><span class="note">через 26 дн.</span></td>
       <td>ДМС</td><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;БЕЛОЯРСКАЯ АЭС - АВТО&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "БЕЛОЯРСКАЯ АЭС - АВТО"</a></td>
       <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515417708" target="_blank" rel="noopener">Право заключения договора на добровольное медицинское страхование для работников ООО «Белоярская АЭС-Авто» в 2</a><br><span class="note">223-ФЗ, объявлена 19.11.2025 · в предмете два года — договор может быть многолетним</span></td>
       <td class="n">37,6 млн ₽</td>
-      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr></tbody></table></div>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 2</span></td></tr><tr><td style="white-space:nowrap"><span class="days ">≈ 17.12.2026</span><br><span class="note">через 54 дн.</span></td>
+      <td>НС и личное страхование</td><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ГОРОДСКИЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ГОРОДСКИЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ"</a></td>
+      <td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32515542671" target="_blank" rel="noopener">Отбор страховой компании на право заключения договора личного страхования работников ГЭ122.25 ЗК</a><br><span class="note">223-ФЗ, объявлена 17.12.2025</span></td>
+      <td class="n">37,1 млн ₽<br><span class="note">договор 0 ₽</span></td>
+      <td><span class="note">не раскрыт (223-ФЗ) · заявок: 3</span></td></tr></tbody></table></div>
       <div class="note">Прогноз — по дате прошлогодней закупки: страховые договоры обычно заключают на год, и новую закупку заказчик объявляет примерно в те же дни. Многолетние и перенесённые договоры прогноз не видит. Закупки, которые заказчик уже объявил заново, из списка убраны. Фильтр периода здесь не действует, остальные фильтры действуют.</div>
       <button id="calCsv" class="js-only" style="margin-top:10px">Скачать календарь CSV</button>
     </div>
 
     <div class="card">
       <h2>Идёт приём заявок</h2>
-      <div class="tablewrap"><table id="open"><tbody><tr><th>Подать до</th><th>Вид</th><th>Предмет</th><th>Заказчик</th><th class="n">Начальная цена</th></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0879600004026000193" target="_blank" rel="noopener">Услуги по страхованию гражданской ответственности владельцев автотранспортных средств</a></td>
-      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ЦЕНТР ОБЕСПЕЧЕНИЯ ДЕЯТЕЛЬНОСТИ ОРГАНОВ МЕСТНОГО САМОУПРАВЛЕНИЯ КАРАЧАЕВСКОГО ГОРОДСКОГО ОКРУГА&quot;">МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ЦЕНТР ОБЕСПЕЧЕНИЯ ДЕЯТЕЛЬНОСТИ ОРГАНОВ МЕСТНОГО САМОУПР</a></td><td class="n">20 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0879600004026000194" target="_blank" rel="noopener">Услуги по страхованию гражданской ответственности владельцев автотранспортных средств</a></td>
-      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ЦЕНТР ОБЕСПЕЧЕНИЯ ДЕЯТЕЛЬНОСТИ ОРГАНОВ МЕСТНОГО САМОУПРАВЛЕНИЯ КАРАЧАЕВСКОГО ГОРОДСКОГО ОКРУГА&quot;">МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ЦЕНТР ОБЕСПЕЧЕНИЯ ДЕЯТЕЛЬНОСТИ ОРГАНОВ МЕСТНОГО САМОУПР</a></td><td class="n">16 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0573500000526000110" target="_blank" rel="noopener">Оказание услуг по оформлению страхования автогражданской ответственности (ОСАГО) для нужд КП «МЭД» в 2027 году</a></td>
-      <td><a href="#" class="cust" data-cust="КАЗЕННОЕ ПРЕДПРИЯТИЕ &quot;МОСКОВСКАЯ ЭНЕРГЕТИЧЕСКАЯ ДИРЕКЦИЯ&quot;">КАЗЕННОЕ ПРЕДПРИЯТИЕ "МОСКОВСКАЯ ЭНЕРГЕТИЧЕСКАЯ ДИРЕКЦИЯ"</a></td><td class="n">1,7 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0130600032526000212" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="АДМИНИСТРАЦИЯ ГРЯЗОВЕЦКОГО МУНИЦИПАЛЬНОГО ОКРУГА ВОЛОГОДСКОЙ ОБЛАСТИ">АДМИНИСТРАЦИЯ ГРЯЗОВЕЦКОГО МУНИЦИПАЛЬНОГО ОКРУГА ВОЛОГОДСКОЙ ОБЛАСТИ</a></td><td class="n">3 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0348400008426000085" target="_blank" rel="noopener">Страхование гражданской ответственности владельцев транспортных средств. МСБК "Парамоново"</a></td>
-      <td><a href="#" class="cust" data-cust="ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ &quot;ЦЕНТР СПОРТИВНОЙ ПОДГОТОВКИ СБОРНЫХ КОМАНД РОССИИ&quot; МЕЖДУНАРОДНЫЙ САННО-БОБСЛЕЙНЫЙ КОМПЛЕКС &quot;ПАРАМОНОВО&quot;">ФИЛИАЛ ФЕДЕРАЛЬНОГО ГОСУДАРСТВЕННОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ "ЦЕНТР СПОРТИВНОЙ ПОДГОТОВКИ СБ</a></td><td class="n">31 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0165300003326000122" target="_blank" rel="noopener">Страхование гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на опасном объекте: «Гидротехниче</a></td>
-      <td><a href="#" class="cust" data-cust="АДМИНИСТРАЦИЯ КОЛПАШЕВСКОГО РАЙОНА">АДМИНИСТРАЦИЯ КОЛПАШЕВСКОГО РАЙОНА</a></td><td class="n">116 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616471694" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ &quot;РАЙОННАЯ БОЛЬНИЦА Г. КАСЛИ&quot;">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ "РАЙОННАЯ БОЛЬНИЦА Г. КАСЛИ"</a></td><td class="n">273 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616471597" target="_blank" rel="noopener">Оказание услуг по добровольному страхованию автотранспорта (КАСКО)</a></td>
-      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;АДМИНИСТРАЦИЯ ВОЛГО-БАЛТИЙСКОГО БАССЕЙНА ВНУТРЕННИХ ВОДНЫХ ПУТЕЙ&quot;">ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "АДМИНИСТРАЦИЯ ВОЛГО-БАЛТИЙСКОГО БАССЕЙНА ВНУТРЕННИХ ВОДН</a></td><td class="n">1,8 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0304100007426000038" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автотранспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="ВЕРХОВНЫЙ СУД КАБАРДИНО-БАЛКАРСКОЙ РЕСПУБЛИКИ">ВЕРХОВНЫЙ СУД КАБАРДИНО-БАЛКАРСКОЙ РЕСПУБЛИКИ</a></td><td class="n">36 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0131200001026007215" target="_blank" rel="noopener">2026-07739 - Оказание услуг по обязательному страхованию автогражданской ответственности</a></td>
-      <td><a href="#" class="cust" data-cust="МИНИСТЕРСТВО ПО РЕГУЛИРОВАНИЮ КОНТРАКТНОЙ СИСТЕМЫ В СФЕРЕ ЗАКУПОК ВОРОНЕЖСКОЙ ОБЛАСТИ">МИНИСТЕРСТВО ПО РЕГУЛИРОВАНИЮ КОНТРАКТНОЙ СИСТЕМЫ В СФЕРЕ ЗАКУПОК ВОРОНЕЖСКОЙ ОБЛАСТИ</a></td><td class="n">458 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0345300017226000215" target="_blank" rel="noopener">Страхование гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии на опасном объекте</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ ЛЕНИНГРАДСКОЙ ОБЛАСТИ &quot;ТИХВИНСКАЯ МЕЖРАЙОННАЯ БОЛЬНИЦА ИМ.А.Ф.КАЛМЫКОВА&quot;">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ ЛЕНИНГРАДСКОЙ ОБЛАСТИ "ТИХВИНСКАЯ МЕЖ</a></td><td class="n">50 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0145200000426001514" target="_blank" rel="noopener">Оказание услуг по обеспечению программой добровольного медицинского страхования работников</a></td>
-      <td><a href="#" class="cust" data-cust="КОМИТЕТ ГОСУДАРСТВЕННОГО ЗАКАЗА ЛЕНИНГРАДСКОЙ ОБЛАСТИ">КОМИТЕТ ГОСУДАРСТВЕННОГО ЗАКАЗА ЛЕНИНГРАДСКОЙ ОБЛАСТИ</a></td><td class="n">14,2 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>НС и личное страхование</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0119200000126017617" target="_blank" rel="noopener">ЗК-№-17348/26 «Страхование жизни, здоровья и от несчастного случая работников КГКУ "Спасатель"»</a></td>
-      <td><a href="#" class="cust" data-cust="АГЕНТСТВО ГОСУДАРСТВЕННОГО ЗАКАЗА КРАСНОЯРСКОГО КРАЯ">АГЕНТСТВО ГОСУДАРСТВЕННОГО ЗАКАЗА КРАСНОЯРСКОГО КРАЯ</a></td><td class="n">424 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616468864" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автогражданской ответственности владельцев транспортных средств (ОСАГО) для нужд ГАУЗ «ООКСП»</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ &quot;ОРЕНБУРГСКАЯ ОБЛАСТНАЯ КЛИНИЧЕСКАЯ СТОМАТОЛОГИЧЕСКАЯ ПОЛИКЛИНИКА&quot;">ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ "ОРЕНБУРГСКАЯ ОБЛАСТНАЯ КЛИНИЧЕСКАЯ </a></td><td class="n">22 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0318300552926000845" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="УПРАВЛЕНИЕ ПО ЗАКУПКАМ ДЛЯ МУНИЦИПАЛЬНЫХ НУЖД АДМИНИСТРАЦИИ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ ГОРОДСКОЙ ОКРУГ ГОРОД АРМАВИР КРАСНОДАРСКОГО КРАЯ">УПРАВЛЕНИЕ ПО ЗАКУПКАМ ДЛЯ МУНИЦИПАЛЬНЫХ НУЖД АДМИНИСТРАЦИИ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ ГОР</a></td><td class="n">12 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0356500001426009086" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ПЕРМСКОГО КРАЯ &quot;ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ПЕРМСКОГО КРАЯ "ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК"</a></td><td class="n">157 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0360200000326000081" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ &quot;ДОМ ПРИЕМА ОФИЦИАЛЬНЫХ ДЕЛЕГАЦИЙ ПРАВИТЕЛЬСТВА САРАТОВСКОЙ ОБЛАСТИ &quot;ОКТЯБРЬСКОЕ УЩЕЛЬЕ&quot;">ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ "ДОМ ПРИЕМА ОФИЦИАЛЬНЫХ ДЕЛЕГАЦИЙ ПРАВИТЕЛЬСТВА САРАТОВСКОЙ ОБЛ</a></td><td class="n">16 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>НС и личное страхование</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0351100004626000036" target="_blank" rel="noopener">Оказание услуг по обязательному личному страхованию работников (спасателей) ФКУ "Сибирский АПСЦ", в соответствии с Федеральным законом от 22</a></td>
-      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;СИБИРСКИЙ АВИАЦИОННЫЙ ПОИСКОВО-СПАСАТЕЛЬНЫЙ ЦЕНТР&quot;">ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "СИБИРСКИЙ АВИАЦИОННЫЙ ПОИСКОВО-СПАСАТЕЛЬНЫЙ ЦЕНТР"</a></td><td class="n">50 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0301300167026000297" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автогражданской ответственности (ОСАГО) служебного автотранспорта</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ РЕСПУБЛИКАНСКАЯ КЛИНИЧЕСКАЯ ИНФЕКЦИОННАЯ БОЛЬНИЦА">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ РЕСПУБЛИКАНСКАЯ КЛИНИЧЕСКАЯ ИНФЕКЦИОН</a></td><td class="n">171 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0351300291026000036" target="_blank" rel="noopener">страхование гражданской ответственности владельцев автотранспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;КОМПЛЕКСНЫЙ ЦЕНТР СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ НАСЕЛЕНИЯ &quot;ВЕРА&quot; ИСКИТИМСКОГО РАЙОНА НОВОСИБИРСКОЙ ОБЛАСТИ&quot;">МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "КОМПЛЕКСНЫЙ ЦЕНТР СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ НАСЕЛЕНИЯ "</a></td><td class="n">33 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>НС и личное страхование</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0851200000626006783" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию медицинских, фармацевтических и иных работников государственных медицинских организаций, подведо</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ НОВОСИБИРСКОЙ ОБЛАСТИ &quot;УПРАВЛЕНИЕ КОНТРАКТНОЙ СИСТЕМЫ&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ НОВОСИБИРСКОЙ ОБЛАСТИ "УПРАВЛЕНИЕ КОНТРАКТНОЙ СИСТЕМЫ"</a></td><td class="n">624 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616458837" target="_blank" rel="noopener">Закупка услуг по страхованию имущества АО «Марка»в части терроризма и диверсии, а также от БПЛА</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МАРКА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МАРКА"</a></td><td class="n">23,6 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0318200071326000099" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО).</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ &quot;СПЕЦИАЛИЗИРОВАННАЯ ПСИХИАТРИЧЕСКАЯ БОЛЬНИЦА № 3&quot; МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ КРАСНОДАРСКОГО КРАЯ">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ "СПЕЦИАЛИЗИРОВАННАЯ ПСИХИАТРИЧЕСКАЯ Б</a></td><td class="n">34 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616457667" target="_blank" rel="noopener">Страхование каско для нужд АО «ТГЭС»</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТУЛЬСКИЕ ГОРОДСКИЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ТУЛЬСКИЕ ГОРОДСКИЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ"</a></td><td class="n">160 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0163100001426000025" target="_blank" rel="noopener">Услуги страхования (услуги обязательного страхования гражданской ответственности владельцев транспортных средств)</a></td>
-      <td><a href="#" class="cust" data-cust="СЛЕДСТВЕННОЕ УПРАВЛЕНИЕ СЛЕДСТВЕННОГО КОМИТЕТА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО СМОЛЕНСКОЙ ОБЛАСТИ">СЛЕДСТВЕННОЕ УПРАВЛЕНИЕ СЛЕДСТВЕННОГО КОМИТЕТА РОССИЙСКОЙ ФЕДЕРАЦИИ ПО СМОЛЕНСКОЙ ОБЛАСТИ</a></td><td class="n">65 тыс. ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616440106" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ПЕРМСКИЙ РЕГИОНАЛЬНЫЙ ОПЕРАТОР ТКО&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ПЕРМСКИЙ РЕГИОНАЛЬНЫЙ ОПЕРАТОР ТКО"</a></td><td class="n">1,3 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616440869" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию сотрудников АО "Департамент продовольствия и социального питания г. Казани"</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ДЕПАРТАМЕНТ ПРОДОВОЛЬСТВИЯ И СОЦИАЛЬНОГО ПИТАНИЯ Г.КАЗАНИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ДЕПАРТАМЕНТ ПРОДОВОЛЬСТВИЯ И СОЦИАЛЬНОГО ПИТАНИЯ Г.КАЗАНИ"</a></td><td class="n">10,6 млн ₽</td></tr><tr><td><span class="days soon">22.10.2026</span><br><span class="note">сегодня</span></td>
-      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616428990" target="_blank" rel="noopener">Оказание услуг по страхованию гражданской ответственности владельцев ОПО за причинение вреда в результате аварий на опасном объекте</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РЯЗАНСКИЕ ГОРОДСКИЕ РАСПРЕДЕЛИТЕЛЬНЫЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РЯЗАНСКИЕ ГОРОДСКИЕ РАСПРЕДЕЛИТЕЛЬНЫЕ ЭЛЕКТРИЧЕСКИЕ СЕТИ"</a></td><td class="n">9 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0801600000526000045" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО) для нужд Администрации муниц</a></td>
-      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ЦЕНТРАЛИЗОВАННАЯ БУХГАЛТЕРИЯ МУНИЦИПАЛЬНОГО РАЙОНА ГАФУРИЙСКИЙ РАЙОН РЕСПУБЛИКИ БАШКОРТОСТАН&quot;">МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ЦЕНТРАЛИЗОВАННАЯ БУХГАЛТЕРИЯ МУНИЦИПАЛЬНОГО РАЙОНА ГАФУ</a></td><td class="n">47 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616479884" target="_blank" rel="noopener">Заключение договора страхования (оплаты страховой премии) КАСКО на автомобиль</a></td>
-      <td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;АКРИЛАН&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АКРИЛАН"</a></td><td class="n">135 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616474678" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца опасных объектов за причинение вреда в результате аварии н</a></td>
-      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;АЛТАЙСКИЕ ИНЖЕНЕРНЫЕ СИСТЕМЫ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "АЛТАЙСКИЕ ИНЖЕНЕРНЫЕ СИСТЕМЫ"</a></td><td class="n">38 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0105500000226001791" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="СЛУЖБА РЕГУЛИРОВАНИЯ КОНТРАКТНОЙ СИСТЕМЫ В СФЕРЕ ЗАКУПОК РЕСПУБЛИКИ КАЛМЫКИЯ">СЛУЖБА РЕГУЛИРОВАНИЯ КОНТРАКТНОЙ СИСТЕМЫ В СФЕРЕ ЗАКУПОК РЕСПУБЛИКИ КАЛМЫКИЯ</a></td><td class="n">348 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616476157" target="_blank" rel="noopener">Оказание услуг по страхованию имущества ЛОГБУ "Всеволожский ДИ"</a></td>
-      <td><a href="#" class="cust" data-cust="ЛЕНИНГРАДСКОЕ ОБЛАСТНОЕ ГОСУДАРСТВЕННОЕ СТАЦИОНАРНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ &quot;ВСЕВОЛОЖСКИЙ ДОМ-ИНТЕРНАТ ДЛЯ ПРЕСТАРЕЛЫХ И ИНВАЛИДОВ&quot;">ЛЕНИНГРАДСКОЕ ОБЛАСТНОЕ ГОСУДАРСТВЕННОЕ СТАЦИОНАРНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СОЦИАЛЬНОГО ОБСЛ</a></td><td class="n">250 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616476049" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автогражданской ответственности (ОСАГО) автотранспортных средств ФГАУ НИИ Восход</a></td>
-      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ &quot;НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ &quot;ВОСХОД&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ "НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ "ВОСХ</a></td><td class="n">68 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616475996" target="_blank" rel="noopener">Оказание услуг по страхованию транспортных средств (КАСКО)</a></td>
-      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ЛЕНСВЕТ&quot;">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ЛЕНСВЕТ"</a></td><td class="n">1,2 млн ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0372200115926000143" target="_blank" rel="noopener">Страхование автотранспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ &quot;ГОРОДСКАЯ ПОЛИКЛИНИКА №23&quot;">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ "ГОРОДСКАЯ ПОЛИКЛ</a></td><td class="n">150 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616475646" target="_blank" rel="noopener">Оказание услуг по страхованию автомобилей КАСКО для нужд Филиала ФГБУ "ВНИИИМТ" Росздравнадзора в г. Екатеринбург</a></td>
-      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И ИСПЫТАТЕЛЬНЫЙ ИНСТИТУТ МЕДИЦИНСКОЙ ТЕХНИКИ&quot; ФЕДЕРАЛЬНОЙ СЛУЖБЫ ПО НАДЗОРУ В СФЕРЕ ЗДРАВООХРАНЕНИЯ">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ И</a></td><td class="n">35 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>НС и личное страхование</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616475571" target="_blank" rel="noopener">Оказание услуг по коллективному страхованию от несчастных случаев и болезней сотрудников МУ «АСС «Юпитер» в 2027 году</a></td>
-      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ УЧРЕЖДЕНИЕ &quot;АВАРИЙНО-СПАСАТЕЛЬНАЯ СЛУЖБА &quot;ЮПИТЕР&quot;">МУНИЦИПАЛЬНОЕ УЧРЕЖДЕНИЕ "АВАРИЙНО-СПАСАТЕЛЬНАЯ СЛУЖБА "ЮПИТЕР"</a></td><td class="n">57 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0346200016126000061" target="_blank" rel="noopener">Услуги по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
-      <td><a href="#" class="cust" data-cust="ОБЛАСТНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;УПРАВЛЕНИЕ ГОСУДАРСТВЕННОЙ ПРОТИВОПОЖАРНОЙ СПАСАТЕЛЬНОЙ СЛУЖБЫ ЛИПЕЦКОЙ ОБЛАСТИ&quot;">ОБЛАСТНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "УПРАВЛЕНИЕ ГОСУДАРСТВЕННОЙ ПРОТИВОПОЖАРНОЙ СПАСАТЕЛЬНОЙ СЛУ</a></td><td class="n">174 тыс. ₽</td></tr><tr><td><span class="days soon">23.10.2026</span><br><span class="note">завтра</span></td>
-      <td>Ответственность</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0369200001626000084" target="_blank" rel="noopener">оказание услуг обязательного страхования гражданской ответственности</a></td>
-      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ &quot;ЧЕЛЯБИНСКОЕ ОБЛАСТНОЕ БЮРО СУДЕБНО-МЕДИЦИНСКОЙ ЭКСПЕРТИЗЫ&quot;">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ "ЧЕЛЯБИНСКОЕ ОБЛАСТНОЕ БЮРО СУДЕБНО-М</a></td><td class="n">54 тыс. ₽</td></tr></tbody></table></div>
+      <div class="tablewrap"><table id="open"><tbody><tr><th>Подать до</th><th>Вид</th><th>Предмет</th><th>Заказчик</th><th class="n">Начальная цена</th></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616415623" target="_blank" rel="noopener">Услуги по страхованию (добровольное медицинское страхование сотрудников)</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ СВЕРДЛОВСКОЙ ОБЛАСТИ &quot;УПРАВЛЕНИЕ ГОСУДАРСТВЕННОЙ ЭКСПЕРТИЗЫ &quot;">ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ СВЕРДЛОВСКОЙ ОБЛАСТИ "УПРАВЛЕНИЕ ГОСУДАРСТВЕННОЙ ЭКСПЕРТИЗЫ "</a></td><td class="n">11,8 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616357495" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников АО "Мособлгаз"</a></td>
+      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МОСОБЛГАЗ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МОСОБЛГАЗ"</a></td><td class="n">80,5 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0329200062226002802" target="_blank" rel="noopener">Оказание услуг обязательного страхования гражданской ответственности владельцев транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ВОЛГОГРАДСКОЙ ОБЛАСТИ &quot;ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ВОЛГОГРАДСКОЙ ОБЛАСТИ "ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК"</a></td><td class="n">140 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0132600007726000042" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (автострахование ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="УПРАВЛЕНИЕ ФИНАНСОВ АДМИНИСТРАЦИИ ЛЫСКОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ">УПРАВЛЕНИЕ ФИНАНСОВ АДМИНИСТРАЦИИ ЛЫСКОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ</a></td><td class="n">200 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0137200001226008122" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="МИНИСТЕРСТВО КОНКУРЕНТНОЙ ПОЛИТИКИ КАЛУЖСКОЙ ОБЛАСТИ">МИНИСТЕРСТВО КОНКУРЕНТНОЙ ПОЛИТИКИ КАЛУЖСКОЙ ОБЛАСТИ</a></td><td class="n">3 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0372200138126000075" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию (ОСАГО) автотранспортных средств для нужд Санкт-Петербургского государственного казенного учрежд</a></td>
+      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ЖИЛИЩНОЕ АГЕНТСТВО КАЛИНИНСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА&quot;">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ЖИЛИЩНОЕ АГЕНТСТВО КАЛИНИНСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА"</a></td><td class="n">421 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0869200000226008696" target="_blank" rel="noopener">Страхование гражданской ответственности владельцев транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК ЧЕЛЯБИНСКОЙ ОБЛАСТИ&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК ЧЕЛЯБИНСКОЙ ОБЛАСТИ"</a></td><td class="n">26 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0816500000626015933" target="_blank" rel="noopener">Оказание услуг по страхованию имущества</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ РЕСПУБЛИКИ САХА (ЯКУТИЯ) &quot;ЦЕНТР ЗАКУПОК РЕСПУБЛИКИ САХА (ЯКУТИЯ)&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ РЕСПУБЛИКИ САХА (ЯКУТИЯ) "ЦЕНТР ЗАКУПОК РЕСПУБЛИКИ САХА (ЯКУТИЯ)"</a></td><td class="n">127 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0372200130026000041" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев автотранспортных средств (ОСАГО) СПб ГБУ СОН «СРЦН Фрунзе</a></td>
+      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ НАСЕЛЕНИЯ &quot;СОЦИАЛЬНО-РЕАБИЛИТАЦИОННЫЙ ЦЕНТР ДЛЯ НЕСОВЕРШЕННОЛЕТНИХ ФРУНЗЕНСКОГО РАЙОНА САНКТ-ПЕТЕРБУРГА&quot;">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ СОЦИАЛЬНОГО ОБСЛУЖИВАНИЯ НАСЕЛЕНИЯ "СОЦИАЛЬНО-РЕАБИЛИТАЦИОННЫЙ ЦЕНТР ДЛЯ НЕСОВЕРШЕННОЛЕТНИХ ФРУНЗЕНСКОГ</a></td><td class="n">23 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0866100000426000018" target="_blank" rel="noopener">Услуги по страхованию гражданской ответственности владельцев автотранспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;УГОЛОВНО-ИСПОЛНИТЕЛЬНАЯ ИНСПЕКЦИЯ УПРАВЛЕНИЯ ФЕДЕРАЛЬНОЙ СЛУЖБЫ ИСПОЛНЕНИЯ НАКАЗАНИЙ ПО ТУЛЬСКОЙ ОБЛАСТИ&quot;">ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "УГОЛОВНО-ИСПОЛНИТЕЛЬНАЯ ИНСПЕКЦИЯ УПРАВЛЕНИЯ ФЕДЕРАЛЬНОЙ СЛУЖБЫ ИСПОЛНЕНИЯ НАКАЗАНИЙ ПО ТУЛЬСКОЙ ОБЛАСТИ"</a></td><td class="n">68 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0861300002926000207" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автогражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;СЛУЖБА ОБЕСПЕЧЕНИЯ&quot; КОРСАКОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА">МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "СЛУЖБА ОБЕСПЕЧЕНИЯ" КОРСАКОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА</a></td><td class="n">146 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0120300004426000048" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца опасных объектов за причинение вреда в результате аварий н</a></td>
+      <td><a href="#" class="cust" data-cust="АДМИНИСТРАЦИЯ АРСЕНЬЕВСКОГО ГОРОДСКОГО ОКРУГА">АДМИНИСТРАЦИЯ АРСЕНЬЕВСКОГО ГОРОДСКОГО ОКРУГА</a></td><td class="n">2,4 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=1200700105426000016" target="_blank" rel="noopener">Оказание услуг по страхованию имущества</a></td>
+      <td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;ЛЕДОВЫЙ ДВОРЕЦ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ЛЕДОВЫЙ ДВОРЕЦ"</a></td><td class="n">9,8 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373100077426000017" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ &quot;ВЕДОМСТВЕННАЯ ОХРАНА МИНИСТЕРСТВА ФИНАНСОВ РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННОЕ УЧРЕЖДЕНИЕ "ВЕДОМСТВЕННАЯ ОХРАНА МИНИСТЕРСТВА ФИНАНСОВ РОССИЙСКОЙ ФЕДЕРАЦИИ"</a></td><td class="n">552 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0127200000226005572" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности (ОСАГО) владельцев транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="УПРАВЛЕНИЕ ГОСУДАРСТВЕННЫХ ЗАКУПОК БРЯНСКОЙ ОБЛАСТИ">УПРАВЛЕНИЕ ГОСУДАРСТВЕННЫХ ЗАКУПОК БРЯНСКОЙ ОБЛАСТИ</a></td><td class="n">57 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0845300015026000850" target="_blank" rel="noopener">Услуги по страхованию (КАСКО)</a></td>
+      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ВЫБОРГСКОГО МУНИЦИПАЛЬНОГО РАЙОНА ЛЕНИНГРАДСКОЙ ОБЛАСТИ &quot;ЕДИНОЕ УПРАВЛЕНИЕ МУНИЦИПАЛЬНЫМИ ЗАКАЗАМИ&quot;">МУНИЦИПАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ВЫБОРГСКОГО МУНИЦИПАЛЬНОГО РАЙОНА ЛЕНИНГРАДСКОЙ ОБЛАСТИ "ЕДИНОЕ УПРАВЛЕНИЕ МУНИЦИПАЛЬНЫМИ ЗАКАЗАМИ"</a></td><td class="n">221 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0116300000126001129" target="_blank" rel="noopener">Оказание услуг по страхованию муниципального имущества</a></td>
+      <td><a href="#" class="cust" data-cust="ОКРУЖНАЯ АДМИНИСТРАЦИЯ ГОРОДА ЯКУТСКА">ОКРУЖНАЯ АДМИНИСТРАЦИЯ ГОРОДА ЯКУТСКА</a></td><td class="n">1,3 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616477914" target="_blank" rel="noopener">Запрос котировок в электронной форме на право заключения Договора страхования КАСКО</a></td>
+      <td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;АВТОДОР-ПЛАТНЫЕ ДОРОГИ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АВТОДОР-ПЛАТНЫЕ ДОРОГИ"</a></td><td class="n">3,7 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Ответственность</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0320100011226000571" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности перевозчика за причинение при перевозках вреда жизни, здоровью, имущ</a></td>
+      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ &quot;ВСЕРОССИЙСКИЙ ДЕТСКИЙ ЦЕНТР &quot;ОКЕАН&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ "ВСЕРОССИЙСКИЙ ДЕТСКИЙ ЦЕНТР "ОКЕАН"</a></td><td class="n">730 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616470515" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию для нужд ООО «АстраханьПассажирСервис» в 2026-2027 г.г.</a></td>
+      <td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;АСТРАХАНЬПАССАЖИРСЕРВИС&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АСТРАХАНЬПАССАЖИРСЕРВИС"</a></td><td class="n">1,1 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0365400001926000111" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию от клещевого энцефалита работников Томского РВПиС</a></td>
+      <td><a href="#" class="cust" data-cust="ТОМСКИЙ РАЙОН ВОДНЫХ ПУТЕЙ И СУДОХОДСТВА - ФИЛИАЛ ФЕДЕРАЛЬНОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ &quot;АДМИНИСТРАЦИЯ ОБЬ-ИРТЫШСКОГО БАССЕЙНА ВНУТРЕННИХ ВОДНЫХ ПУТЕЙ&quot;">ТОМСКИЙ РАЙОН ВОДНЫХ ПУТЕЙ И СУДОХОДСТВА - ФИЛИАЛ ФЕДЕРАЛЬНОГО БЮДЖЕТНОГО УЧРЕЖДЕНИЯ "АДМИНИСТРАЦИЯ ОБЬ-ИРТЫШСКОГО БАССЕЙНА ВНУТРЕННИХ ВОДНЫХ ПУТЕЙ"</a></td><td class="n">16 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616468162" target="_blank" rel="noopener">Право заключение договора на оказание услуг добровольного медицинского страхования (ДМС) для нужд АО ОКТБ Омега</a></td>
+      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ОСОБОЕ КОНСТРУКТОРСКО-ТЕХНОЛОГИЧЕСКОЕ БЮРО &quot;ОМЕГА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ОСОБОЕ КОНСТРУКТОРСКО-ТЕХНОЛОГИЧЕСКОЕ БЮРО "ОМЕГА"</a></td><td class="n">2,5 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616453360" target="_blank" rel="noopener">Услуги по страхованию гражданской ответственности владельцев транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДСКОГО ОКРУГА САМАРА &quot;МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПРЕДОСТАВЛЕНИЯ ГОСУДАРСТВЕННЫХ (МУНИЦИПАЛЬНЫХ) УСЛУГ&quot;">МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ГОРОДСКОГО ОКРУГА САМАРА "МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПРЕДОСТАВЛЕНИЯ ГОСУДАРСТВЕННЫХ (МУНИЦИПАЛЬНЫХ) УСЛУГ"</a></td><td class="n">42 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616452922" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ПАССАЖИРСКОГО АВТОМОБИЛЬНОГО ТРАНСПОРТА">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ ПАССАЖИРСКОГО АВТОМОБИЛЬНОГО ТРАНСПОРТА</a></td><td class="n">58,4 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Имущество</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616451602" target="_blank" rel="noopener">Оказание услуг по страхованию недвижимого имущества акционерного общества «Выставка достижений народного хозяйства»</a></td>
+      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ВЫСТАВКА ДОСТИЖЕНИЙ НАРОДНОГО ХОЗЯЙСТВА&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ВЫСТАВКА ДОСТИЖЕНИЙ НАРОДНОГО ХОЗЯЙСТВА"</a></td><td class="n">11,7 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616450598" target="_blank" rel="noopener">Договор на оказание услуг по страхованию ОСАГО транспортных средств ЕМУП «Гортранс»</a></td>
+      <td><a href="#" class="cust" data-cust="ЕКАТЕРИНБУРГСКОЕ МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГОРОДСКОЙ ТРАНСПОРТ&quot;">ЕКАТЕРИНБУРГСКОЕ МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГОРОДСКОЙ ТРАНСПОРТ"</a></td><td class="n">8,4 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616450741" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="СПЕЦИАЛИЗИРОВАННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ЛЕСНОГО ХОЗЯЙСТВА ВОЛОГОДСКОЙ ОБЛАСТИ &quot;ВОЛОГОДСКОЕ ЛЕСОХОЗЯЙСТВЕННОЕ ОБЪЕДИНЕНИЕ&quot;">СПЕЦИАЛИЗИРОВАННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ ЛЕСНОГО ХОЗЯЙСТВА ВОЛОГОДСКОЙ ОБЛАСТИ "ВОЛОГОДСКОЕ ЛЕСОХОЗЯЙСТВЕННОЕ ОБЪЕДИНЕНИЕ"</a></td><td class="n">486 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ДМС</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616448332" target="_blank" rel="noopener">Оказание услуг по добровольному медицинскому страхованию работников ФГАУ «УИСП» Минобороны России</a></td>
+      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ &quot;УПРАВЛЕНИЕ ИМУЩЕСТВОМ СПЕЦИАЛЬНЫХ ПРОЕКТОВ&quot; МИНИСТЕРСТВА ОБОРОНЫ РОССИЙСКОЙ ФЕДЕРАЦИИ">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ УЧРЕЖДЕНИЕ "УПРАВЛЕНИЕ ИМУЩЕСТВОМ СПЕЦИАЛЬНЫХ ПРОЕКТОВ" МИНИСТЕРСТВА ОБОРОНЫ РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td class="n">11,4 млн ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>Опасные объекты</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616446421" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца опасного объекта за причинение вреда в результате аварии н</a></td>
+      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕПЛОВАЯ КОМПАНИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕПЛОВАЯ КОМПАНИЯ"</a></td><td class="n">859 тыс. ₽</td></tr><tr><td><span class="days soon">26.10.2026</span><br><span class="note">через 2 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616447174" target="_blank" rel="noopener">Обязательное страхование гражданской ответственности владельцев транспортных средств</a></td>
+      <td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;СЫКТЫВКАРСКИЙ ВОДОКАНАЛ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "СЫКТЫВКАРСКИЙ ВОДОКАНАЛ"</a></td><td class="n">1,3 млн ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373400012326000013" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельца транспортного средства (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ ВСЕРОССИЙСКИЙ ЦЕНТР ЭКСПЕРТИЗЫ И СЕРТИФИКАЦИИ В ОБЛАСТИ ОХРАНЫ И РЕСТАВРАЦИИ ПАМЯТНИКОВ ИСТОРИИ И КУЛЬТУРЫ &quot;РОСГОСЭКСПЕРТИЗА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ ВСЕРОССИЙСКИЙ ЦЕНТР ЭКСПЕРТИЗЫ И СЕРТИФИКАЦИИ В ОБЛАСТИ ОХРАНЫ И РЕСТАВРАЦИИ ПАМЯТНИКОВ ИСТОРИ</a></td><td class="n">137 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>Прочее</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0372200167826000028" target="_blank" rel="noopener">Оказание услуг по страхованию</a></td>
+      <td><a href="#" class="cust" data-cust="САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОРЖИЛОБМЕН&quot;">САНКТ-ПЕТЕРБУРГСКОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОРЖИЛОБМЕН"</a></td><td class="n">227 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>Ответственность</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0132600033926000045" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности перевозчика за причинение вреда жизни, здоровью, имуществу пассажиро</a></td>
+      <td><a href="#" class="cust" data-cust="УПРАВЛЕНИЕ ЖКХ И СТРОИТЕЛЬСТВА АДМИНИСТРАЦИИ БУТУРЛИНСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ">УПРАВЛЕНИЕ ЖКХ И СТРОИТЕЛЬСТВА АДМИНИСТРАЦИИ БУТУРЛИНСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ</a></td><td class="n">91 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=32616485038" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию автогражданской ответственности (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ДОРОЖНОЕ РЕМОНТНО-ЭКСПЛУАТАЦИОННОЕ УПРАВЛЕНИЕ КИРОВСКОГО РАЙОНА Г.КАЗАНИ&quot;">МУНИЦИПАЛЬНОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ДОРОЖНОЕ РЕМОНТНО-ЭКСПЛУАТАЦИОННОЕ УПРАВЛЕНИЕ КИРОВСКОГО РАЙОНА Г.КАЗАНИ"</a></td><td class="n">355 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0806500000226000914" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ РЕСПУБЛИКИ КАРЕЛИЯ &quot;ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК РЕСПУБЛИКИ КАРЕЛИЯ И МОНИТОРИНГА В СФЕРЕ ЭКОНОМИКИ&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ РЕСПУБЛИКИ КАРЕЛИЯ "ЦЕНТР ОРГАНИЗАЦИИ ЗАКУПОК РЕСПУБЛИКИ КАРЕЛИЯ И МОНИТОРИНГА В СФЕРЕ ЭКОНОМИКИ"</a></td><td class="n">141 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0171200001926004713" target="_blank" rel="noopener">Оказание услуг по обязательному страхованию гражданской ответственности владельцев автотранспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="МИНИСТЕРСТВО КОНКУРЕНТНОЙ ПОЛИТИКИ ЯРОСЛАВСКОЙ ОБЛАСТИ">МИНИСТЕРСТВО КОНКУРЕНТНОЙ ПОЛИТИКИ ЯРОСЛАВСКОЙ ОБЛАСТИ</a></td><td class="n">312 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0131300000626001360" target="_blank" rel="noopener">Оказание услуг обязательного страхования гражданской ответственности владельцев транспортных средств (ОСАГО)</a></td>
+      <td><a href="#" class="cust" data-cust="АДМИНИСТРАЦИЯ ГОРОДСКОГО ОКРУГА ГОРОД ВОРОНЕЖ">АДМИНИСТРАЦИЯ ГОРОДСКОГО ОКРУГА ГОРОД ВОРОНЕЖ</a></td><td class="n">1,2 млн ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>НС и личное страхование</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0373200006626000048" target="_blank" rel="noopener">Оказание услуг по страхованию жизни и здоровья пожарных и спасателей</a></td>
+      <td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ &quot;ПОЖАРНО-СПАСАТЕЛЬНЫЙ ЦЕНТР&quot;">ГОСУДАРСТВЕННОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ ГОРОДА МОСКВЫ "ПОЖАРНО-СПАСАТЕЛЬНЫЙ ЦЕНТР"</a></td><td class="n">651 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>ОСАГО</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0151100013326000089" target="_blank" rel="noopener">Оказание услуг обязательного страхования гражданской ответственности владельцев автотранспортных средств (ОСАГО) для нужд районных (городски</a></td>
+      <td><a href="#" class="cust" data-cust="УПРАВЛЕНИЕ СУДЕБНОГО ДЕПАРТАМЕНТА В НОВОСИБИРСКОЙ ОБЛАСТИ">УПРАВЛЕНИЕ СУДЕБНОГО ДЕПАРТАМЕНТА В НОВОСИБИРСКОЙ ОБЛАСТИ</a></td><td class="n">167 тыс. ₽</td></tr><tr><td><span class="days soon">27.10.2026</span><br><span class="note">через 3 дн.</span></td>
+      <td>КАСКО и транспорт</td><td><a href="https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=0190200000326011780" target="_blank" rel="noopener">Оказание услуг по страхованию транспортного средства Toyota Camry по страховому риску «Хищение+Ущерб»</a></td>
+      <td><a href="#" class="cust" data-cust="ДЕПАРТАМЕНТ ГОСУДАРСТВЕННОГО ЗАКАЗА ЯМАЛО-НЕНЕЦКОГО АВТОНОМНОГО ОКРУГА">ДЕПАРТАМЕНТ ГОСУДАРСТВЕННОГО ЗАКАЗА ЯМАЛО-НЕНЕЦКОГО АВТОНОМНОГО ОКРУГА</a></td><td class="n">70 тыс. ₽</td></tr></tbody></table></div>
     </div>
 
     <div class="card" id="custCard">
-      <h2>Карточка заказчика</h2>
-      <input type="search" id="custQ" placeholder="Название заказчика или номер закупки" autocomplete="off" aria-label="Поиск заказчика">
+      <h2>Карточка заказчика или страховщика</h2>
+      <input type="search" id="custQ" placeholder="Заказчик, страховщик или номер закупки" autocomplete="off" aria-label="Поиск заказчика или страховщика">
       <div class="sugg" id="custSugg"></div>
-      <div id="custView"><div class="note">Начните вводить название, например «Росморпорт» или «Водоканал», или нажмите на заказчика в любой таблице. ИНН и регион в эту выгрузку ЕИС не входят, поэтому поиск идёт по названию и номеру закупки.</div></div>
+      <div id="custView"><div class="note">Начните вводить название, например «Росморпорт», «Водоканал» или «Ингосстрах», или нажмите на заказчика или страховщика в любой таблице. ИНН и регион в эту выгрузку ЕИС не входят, поэтому поиск идёт по названию и номеру закупки.</div></div>
     </div>
 
     <div class="card">
       <h2>Крупнейшие заказчики</h2>
-      <div class="tablewrap"><table id="cust"><tbody><tr><th>Заказчик</th><th>Виды страхования</th><th class="n">Закупок</th><th class="n">Сумма</th></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ"</a></td><td>Опасные объекты, КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС, Ответственность</td><td class="n">6</td><td class="n">3,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФОРВАРД ЭНЕРГО&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФОРВАРД ЭНЕРГО"</a></td><td>Имущество, Опасные объекты, КАСКО и транспорт, Ответственность, ДМС</td><td class="n">6</td><td class="n">3 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ">ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ</a></td><td>ОСАГО, КАСКО и транспорт, НС и личное страхование, Опасные объекты</td><td class="n">8</td><td class="n">2,2 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ">ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>ДМС, НС и личное страхование</td><td class="n">2</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО"</a></td><td>Ответственность, ДМС, Имущество</td><td class="n">4</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ">ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ</a></td><td>НС и личное страхование</td><td class="n">1</td><td class="n">1,7 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ">СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>Имущество, ДМС, НС и личное страхование</td><td class="n">3</td><td class="n">1,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВАНИЮ ДИПЛОМАТИЧЕСКОГО КОРПУСА ПРИ МИНИСТЕРСТВЕ ИНОСТРАННЫХ ДЕЛ РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВ</a></td><td>КАСКО и транспорт, ОСАГО, Имущество, ДМС</td><td class="n">5</td><td class="n">944,5 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;РОСМОРПОРТ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "РОСМОРПОРТ"</a></td><td>Ответственность, КАСКО и транспорт, ОСАГО</td><td class="n">8</td><td class="n">925 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ЦЕНТР&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ЦЕНТР"</a></td><td>КАСКО и транспорт, ОСАГО, Имущество</td><td class="n">3</td><td class="n">902,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1"</a></td><td>Строительно-монтажные риски, Имущество, ДМС</td><td class="n">4</td><td class="n">886,4 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ"</a></td><td>Сельхозстрахование</td><td class="n">4</td><td class="n">877,8 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ТЮМЕНЬ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ТЮМЕНЬ"</a></td><td>ОСАГО, КАСКО и транспорт, Имущество, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">780,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ УРАЛ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ УРАЛ"</a></td><td>КАСКО и транспорт, Имущество, ОСАГО, НС и личное страхование</td><td class="n">4</td><td class="n">691 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ"</a></td><td>ДМС, НС и личное страхование, Имущество</td><td class="n">3</td><td class="n">672,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;Т ПЛЮС&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "Т ПЛЮС"</a></td><td>НС и личное страхование, Ответственность</td><td class="n">2</td><td class="n">622,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА&quot;">ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА"</a></td><td>ДМС, КАСКО и транспорт, Имущество, ОСАГО, Опасные объекты, НС и личное страхование</td><td class="n">12</td><td class="n">594,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛ</a></td><td>КАСКО и транспорт</td><td class="n">3</td><td class="n">585,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРНЫЙ КАВКАЗ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРНЫЙ КАВКАЗ"</a></td><td>Ответственность, КАСКО и транспорт, ДМС, ОСАГО, Имущество</td><td class="n">5</td><td class="n">575,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРО-ЗАПАД&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРО-ЗАПАД"</a></td><td>КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">563,4 млн ₽</td></tr></tbody></table></div>
+      <div class="tablewrap"><table id="cust"><tbody><tr><th>Заказчик</th><th>Виды страхования</th><th class="n">Закупок</th><th class="n">Сумма</th></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФЕДЕРАЛЬНАЯ СЕТЕВАЯ КОМПАНИЯ - РОССЕТИ"</a></td><td>Опасные объекты, КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС, Ответственность</td><td class="n">6</td><td class="n">3,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ФОРВАРД ЭНЕРГО&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ФОРВАРД ЭНЕРГО"</a></td><td>Имущество, Опасные объекты, КАСКО и транспорт, Ответственность, ДМС</td><td class="n">6</td><td class="n">3 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ">ДЕПАРТАМЕНТ ГОРОДА МОСКВЫ ПО КОНКУРЕНТНОЙ ПОЛИТИКЕ</a></td><td>ОСАГО, КАСКО и транспорт, НС и личное страхование, Опасные объекты</td><td class="n">8</td><td class="n">2,2 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ">ГЕНЕРАЛЬНАЯ ПРОКУРАТУРА РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>ДМС, НС и личное страхование</td><td class="n">2</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "МЕЖДУНАРОДНЫЙ АЭРОПОРТ ШЕРЕМЕТЬЕВО"</a></td><td>Ответственность, ДМС, Имущество</td><td class="n">4</td><td class="n">1,9 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ">ФЕДЕРАЛЬНАЯ СЛУЖБА ИСПОЛНЕНИЯ НАКАЗАНИЙ</a></td><td>НС и личное страхование</td><td class="n">1</td><td class="n">1,7 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ">СУДЕБНЫЙ ДЕПАРТАМЕНТ ПРИ ВЕРХОВНОМ СУДЕ РОССИЙСКОЙ ФЕДЕРАЦИИ</a></td><td>Имущество, ДМС, НС и личное страхование</td><td class="n">3</td><td class="n">1,6 млрд ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВАНИЮ ДИПЛОМАТИЧЕСКОГО КОРПУСА ПРИ МИНИСТЕРСТВЕ ИНОСТРАННЫХ ДЕЛ РОССИЙСКОЙ ФЕДЕРАЦИИ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ГЛАВНОЕ ПРОИЗВОДСТВЕННО-КОММЕРЧЕСКОЕ УПРАВЛЕНИЕ ПО ОБСЛУЖИВАНИЮ ДИПЛОМАТИЧЕСКОГО КОРПУСА ПРИ МИНИСТЕРСТВЕ ИНОСТРАННЫХ ДЕЛ РОССИЙСКОЙ ФЕДЕРАЦИИ"</a></td><td>КАСКО и транспорт, ОСАГО, Имущество, ДМС</td><td class="n">5</td><td class="n">944,5 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;РОСМОРПОРТ&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "РОСМОРПОРТ"</a></td><td>Ответственность, КАСКО и транспорт, ОСАГО</td><td class="n">8</td><td class="n">925 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ЦЕНТР&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ЦЕНТР"</a></td><td>КАСКО и транспорт, ОСАГО, Имущество</td><td class="n">3</td><td class="n">902,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ТЕРРИТОРИАЛЬНАЯ ГЕНЕРИРУЮЩАЯ КОМПАНИЯ №1"</a></td><td>Строительно-монтажные риски, Имущество, ДМС</td><td class="n">4</td><td class="n">886,4 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "ОБЪЕДИНЕННАЯ ЗЕРНОВАЯ КОМПАНИЯ"</a></td><td>Сельхозстрахование</td><td class="n">4</td><td class="n">877,8 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ ТЮМЕНЬ&quot;">АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ ТЮМЕНЬ"</a></td><td>ОСАГО, КАСКО и транспорт, Имущество, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">780,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ УРАЛ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ УРАЛ"</a></td><td>КАСКО и транспорт, Имущество, ОСАГО, НС и личное страхование</td><td class="n">4</td><td class="n">691 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &quot;БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ&quot;">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "БАЙКАЛЬСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ"</a></td><td>ДМС, НС и личное страхование, Имущество</td><td class="n">3</td><td class="n">672,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;Т ПЛЮС&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "Т ПЛЮС"</a></td><td>НС и личное страхование, Ответственность</td><td class="n">2</td><td class="n">622,9 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ &quot;ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА&quot;">ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ "ВОДОКАНАЛ САНКТ-ПЕТЕРБУРГА"</a></td><td>ДМС, КАСКО и транспорт, Имущество, ОСАГО, Опасные объекты, НС и личное страхование</td><td class="n">12</td><td class="n">594,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ &quot;ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА&quot;">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ - ФЕДЕРАЛЬНЫЙ МЕДИЦИНСКИЙ БИОФИЗИЧЕСКИЙ ЦЕНТР ИМЕНИ А.И. БУРНАЗЯНА"</a></td><td>КАСКО и транспорт</td><td class="n">3</td><td class="n">585,6 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРНЫЙ КАВКАЗ&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРНЫЙ КАВКАЗ"</a></td><td>Ответственность, КАСКО и транспорт, ДМС, ОСАГО, Имущество</td><td class="n">5</td><td class="n">575,1 млн ₽</td></tr><tr><td><a href="#" class="cust" data-cust="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО &quot;РОССЕТИ СЕВЕРО-ЗАПАД&quot;">ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "РОССЕТИ СЕВЕРО-ЗАПАД"</a></td><td>КАСКО и транспорт, ОСАГО, НС и личное страхование, ДМС</td><td class="n">5</td><td class="n">563,4 млн ₽</td></tr></tbody></table></div>
     </div>
 
-    <p class="note" id="foot">Обновлено в браузере 22.10.2026, 15:58:05. Начальная цена — это бюджет заказчика, а не цена договора. Победители и цены договоров по 44-ФЗ — из реестра контрактов. По 223-ФЗ названия участников в протоколах обезличены, поэтому есть только число заявок и цена победителя по крупнейшим закупкам (80% суммы).</p>
+    <p class="note" id="foot">Обновлено в браузере 24.10.2026, 15:47:29. Начальная цена — это бюджет заказчика, а не цена договора. Победители и цены договоров по 44-ФЗ — из реестра контрактов. По 223-ФЗ названия участников в протоколах обезличены, поэтому есть только число заявок и цена победителя по крупнейшим закупкам (80% суммы).</p>
   </div>
 </div>
 
@@ -806,6 +804,7 @@ function rebuild(){
       winner:String(g(r,'winner')??'').trim(), cprice:toNum(g(r,'cprice')), bids:toNum(g(r,'bids')),
     };
   }).filter(r=>r.date && isFinite(r.price));
+  HAS_DL = DATA.some(r=>r.deadline);
   DATA.forEach(addDiscount);
   indexCustomers();
   if (!DATA.length){ $('dash').classList.add('hide'); $('mapBox').open=true; return; }
@@ -821,18 +820,24 @@ function fromDemo(D){
       winner: x[9]!=null && x[9]>=0 ? D.win[x[9]] : '', cprice: x[10]||NaN,
       bids: x[11]!=null && x[11]>=0 ? x[11] : NaN};
   });
+  HAS_DL = DATA.some(r=>r.deadline);
   DATA.forEach(addDiscount);
   indexCustomers();
   $('mapBox').classList.add('hide');
-  const ns=DATA.filter(isSingle), nc=DATA.filter(isCancelled), left=DATA.filter(r=>!isSingle(r)&&!isCancelled(r));
-  $('srcInfo').innerHTML = `<b>По умолчанию в графиках и таблицах — ${nf.format(left.length)} ${plural(left.length,'закупка','закупки','закупок')} на ${money(left.reduce((a,r)=>a+r.price,0))}</b>: страховые торги из ЕИС (zakupki.gov.ru) по 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено ${esc(D.fetched)}. Всего в выгрузке ${nf.format(DATA.length)}: не учтены закупки у единственного поставщика (${nf.format(ns.length)}, это не торги) и отменённые (${nf.format(nc.length)}). Чтобы видеть все, снимите галочки в фильтрах. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.`;
+  // три непересекающиеся части: торги + единственный поставщик (не отменённые) + отменённые = вся выгрузка
+  const ns=DATA.filter(r=>isSingle(r)&&!isCancelled(r)), nh=ns.filter(isHiddenSingle), nc=DATA.filter(isCancelled), left=DATA.filter(r=>!isSingle(r)&&!isCancelled(r));
+  $('srcInfo').innerHTML = `<b>По умолчанию в графиках и таблицах — ${nf.format(left.length)} ${plural(left.length,'закупка','закупки','закупок')} на ${money(left.reduce((a,r)=>a+r.price,0))}</b>: страховые торги из ЕИС (zakupki.gov.ru) по 44-ФЗ и 223-ФЗ, ОКПД2 65.12, выгружено ${esc(D.fetched)}. Всего в выгрузке ${nf.format(DATA.length)}: не учтены закупки у единственного поставщика (${nf.format(ns.length)}, это не торги${nh.length ? `; из них ${nf.format(nh.length)} по 223-ФЗ записаны как «иной способ», но пришли в ЕИС сразу завершёнными, без срока подачи заявок` : ''}) и отменённые (${nf.format(nc.length)}). Чтобы видеть все, снимите галочки в фильтрах. Победители и цены договоров по 44-ФЗ — из реестра контрактов; по крупнейшим закупкам 223-ФЗ — число заявок и цена победителя из протоколов. Вид страхования определён по тексту предмета закупки. Свой файл можно загрузить кнопкой слева.`;
   initFilters(); render(); $('dash').classList.remove('hide');
 }
 
 /* Снижение на торгах: 1 − цена договора / начальная цена. Значения вне 0–95% считаем ошибкой данных. */
 function addDiscount(r){
   const d = (r.price>0 && r.cprice>0) ? 1 - r.cprice/r.price : NaN;
-  r.disc = (d>=0 && d<0.95) ? d : NaN;
+  const ok = d>=0 && d<0.95;
+  // ОСАГО: тариф задаёт Банк России, начальная цена — потолок, посчитанный заказчиком по формуле тарифа.
+  // Цена договора бывает ниже потолка в разы, но это не торг, поэтому в снижение на торгах ОСАГО не идёт.
+  r.cap = ok && r.type==='ОСАГО' ? d : NaN;
+  r.disc = ok && r.type!=='ОСАГО' ? d : NaN;
 }
 function hasResults(){ return DATA.some(r=>r.winner); }
 function pct(v){ return (v*100).toLocaleString('ru-RU',{maximumFractionDigits:1})+'%'; }
@@ -856,16 +861,21 @@ function initFilters(){
   $('typeNote').textContent = typeDerived ? 'Вид страхования определён по тексту предмета закупки — по ключевым словам. Спорные формулировки попадают в «Прочее».' : '';
 }
 function sizeOf(p){ return SIZES.findIndex(s=>p>=s[1]&&p<s[2]); }
-function isSingle(r){ return /единственн/i.test(r.method); }
+/* Закупка у единственного поставщика. По 223-ФЗ её часто записывают как «иной способ»: выдаёт то, что она
+   приходит в ЕИС сразу завершённой — без срока подачи заявок или со сроком не позже даты публикации.
+   Признак подсказал читатель канала; в выгрузке 20.10.2026 таких 664 закупки на 1,2 млрд ₽. */
+let HAS_DL = false;
+function isHiddenSingle(r){ return HAS_DL && r.law==='223-ФЗ' && !/единственн/i.test(r.method) && (!r.deadline || r.deadline<=r.date); }
+function isSingle(r){ return /единственн/i.test(r.method) || isHiddenSingle(r); }
 function isCancelled(r){ return /отмен/i.test(r.stage); }
-function filtered(ignoreType, ignorePeriod){
+function filtered(ignoreType, ignorePeriod, ignoreComp){
   const from=+$('fFrom').value, to=+$('fTo').value, law=$('fLaw').value, sz=$('fSize').value;
   const comp=$('fComp').checked, canc=$('fCancel').checked;
   return DATA.filter(r=>{
     const m=ym(r.date); if (!ignorePeriod && (m<from||m>to)) return false;
     if (law && r.law!==law) return false;
     if (sz){ const i=sizeOf(r.price); if (sz[0]==='b' ? i!==+sz.slice(1) : (i<0||SIZES[i][3]!==sz)) return false; }
-    if (comp && isSingle(r)) return false;
+    if (comp && !ignoreComp && isSingle(r)) return false;
     if (canc && isCancelled(r)) return false;
     if (!ignoreType && S.types.size && !S.types.has(r.type)) return false;
     return true;
@@ -907,7 +917,7 @@ function render(){
     hasTiming() ? ['Приём заявок идёт', nf.format(open.length), open.length? money(open.reduce((a,r)=>a+r.price,0)) : 'сейчас нет']
                 : ['Приём заявок идёт', '—', 'в файле нет срока подачи'],
   ].concat(hasResults() ? [(()=>{ const d=rows.map(r=>r.disc).filter(isFinite);
-      return ['Снижение на торгах', d.length? pct(median(d)) : '—', d.length? `медиана по ${nf.format(d.length)} закупкам, где известна цена договора` : 'в выборке нет цен договоров']; })()] : [])
+      return ['Снижение на торгах', d.length? pct(median(d)) : '—', d.length? `медиана по ${nf.format(d.length)} закупкам с ценой договора, без ОСАГО` : 'в выборке нет цен договоров']; })()] : [])
   .map(k=>`<div class="kpi"><div class="l">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join('');
   renderMonthly(rows);
   renderTypes(filtered(true));
@@ -1000,6 +1010,10 @@ function renderInsights(rows){
   const bc={}; rows.forEach(r=>bc[r.customer]=(bc[r.customer]||0)+r.price);
   const t10=Object.values(bc).sort((a,b)=>b-a).slice(0,10).reduce((a,v)=>a+v,0);
   li.push(`Десять крупнейших заказчиков дают ${Math.round(t10/sum*100)}% суммы.`);
+  if ($('fComp').checked){
+    const ns=filtered(false,false,true).filter(isSingle), nss=ns.reduce((a,r)=>a+r.price,0), nh=ns.filter(isHiddenSingle).length;
+    if (ns.length) li.push(`Без торгов, у единственного поставщика, — ещё ${nf.format(ns.length)} ${plural(ns.length,'закупка','закупки','закупок')} на ${money(nss)}, в цифры выше они не входят.${nh ? ` Из них ${nf.format(nh)} по 223-ФЗ записаны как «иной способ», но пришли в ЕИС сразу завершёнными, без срока подачи заявок.` : ''}`);
+  }
   $('insights').innerHTML=li.map(x=>`<li>${x}</li>`).join('');
 }
 function renderWinners(rows){
@@ -1014,8 +1028,8 @@ function renderWinners(rows){
   $('winNote').textContent = (DEMO && !HEAD.length
     ? `Страховщик-победитель известен для ${nf.format(m.length)} из ${nf.format(rows.length)} закупок выборки — по 44-ФЗ, из реестра контрактов. По 223-ФЗ названия участников в протоколах ЕИС обезличены.`
     : `Победитель известен для ${nf.format(m.length)} из ${nf.format(rows.length)} закупок выборки.`) + ' Доля — от суммы договоров этих закупок.';
-  $('win').innerHTML = top.length? '<tr><th>Страховщик</th><th>Чаще всего</th><th class="n">Выиграл закупок</th><th class="n">Сумма договоров</th><th class="n">Доля</th><th class="n">Снижение, медиана</th></tr>'+top.map(([k,x])=>
-    `<tr><td>${esc(k)}</td><td>${Object.entries(x.t).sort((p,q)=>q[1]-p[1]).slice(0,2).map(t=>esc(t[0])).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td><td class="n">${pct(x.s/total)}</td><td class="n">${x.d.length? pct(median(x.d)) : '—'}</td></tr>`).join('')
+  $('win').innerHTML = top.length? '<tr><th>Страховщик</th><th>Чаще всего</th><th class="n">Выиграл закупок</th><th class="n">Сумма договоров</th><th class="n">Доля</th><th class="n">Снижение, медиана (без ОСАГО)</th></tr>'+top.map(([k,x])=>
+    `<tr><td>${insLink(k)}</td><td>${Object.entries(x.t).sort((p,q)=>q[1]-p[1]).slice(0,2).map(t=>esc(t[0])).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td><td class="n">${pct(x.s/total)}</td><td class="n">${x.d.length? pct(median(x.d)) : '—'}</td></tr>`).join('')
     : '<tr><td class="empty">В выборке нет закупок с известным победителем</td></tr>';
 }
 function renderDisc(rows){
@@ -1057,30 +1071,31 @@ function renderOpen(open, today){
     const d=r.deadline? Math.round((r.deadline-today)/864e5):null;
     return `<tr><td><span class="days ${d!=null&&d<=3?'soon':''}">${r.deadline?fmtD(r.deadline):'—'}</span>${d!=null?`<br><span class="note">${d===0?'сегодня':d===1?'завтра':'через '+d+' дн.'}</span>`:''}</td>
       <td>${esc(r.type)}</td><td>${r.num?`<a href="${link(r)}" target="_blank" rel="noopener">${esc(r.object.slice(0,140))}</a>`:esc(r.object.slice(0,140))}</td>
-      <td>${custLink(r.customer,90)}</td><td class="n">${money(r.price)}</td></tr>`;}).join('')
+      <td>${custLink(r.customer,160)}</td><td class="n">${money(r.price)}</td></tr>`;}).join('')
     : '<tr><td class="empty">Открытых закупок в выборке нет</td></tr>';
 }
 function renderCust(rows){
   const a={}; rows.forEach(r=>{ const x=a[r.customer]||(a[r.customer]={s:0,c:0,t:{}}); x.s+=r.price; x.c++; x.t[r.type]=(x.t[r.type]||0)+1; });
   const top=Object.entries(a).sort((x,y)=>y[1].s-x[1].s).slice(0,20);
   $('cust').innerHTML = top.length? '<tr><th>Заказчик</th><th>Виды страхования</th><th class="n">Закупок</th><th class="n">Сумма</th></tr>'+top.map(([k,x])=>
-    `<tr><td>${custLink(k,110)}</td><td>${Object.entries(x.t).sort((p,q)=>q[1]-p[1]).map(t=>esc(t[0])).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td></tr>`).join('')
+    `<tr><td>${custLink(k,300)}</td><td>${Object.entries(x.t).sort((p,q)=>q[1]-p[1]).map(t=>esc(t[0])).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td></tr>`).join('')
     : '<tr><td class="empty">нет данных</td></tr>';
 }
 /* ---------- заказчики: индекс для карточки и календаря ---------- */
-let CUST = {}, CUR_CUST = null;
+let CUST = {}, INS = {}, CUR_CUST = null;
 const CUST_HINT = $('custView').innerHTML;
 function indexCustomers(){
-  CUST = {};
+  CUST = {}; INS = {};
   DATA.forEach(r=>(CUST[r.customer]||(CUST[r.customer]=[])).push(r));
-  Object.values(CUST).forEach(a=>a.sort((x,y)=>y.date-x.date));
+  DATA.forEach(r=>{ if (r.winner) (INS[r.winner]||(INS[r.winner]=[])).push(r); });
+  Object.values(CUST).concat(Object.values(INS)).forEach(a=>a.sort((x,y)=>y.date-x.date));
   CUR_CUST=null; $('custView').innerHTML=CUST_HINT; $('custSugg').innerHTML=''; $('custQ').value='';
 }
 function custLink(name, max){
   return name && name!=='—' ? `<a href="#" class="cust" data-cust="${esc(name)}">${esc(name.slice(0,max))}</a>` : esc(name||'—');
 }
 function holderCell(r){
-  if (r.winner) return esc(r.winner);
+  if (r.winner) return insLink(r.winner);
   if (r.law==='223-ФЗ') return `<span class="note">не раскрыт (223-ФЗ)${isFinite(r.bids)?' · заявок: '+r.bids:''}</span>`;
   return '<span class="note">нет данных</span>';
 }
@@ -1130,9 +1145,9 @@ function renderCal(today){
   $('cal').innerHTML = list.length ? '<tr><th>Ожидается</th><th>Вид</th><th>Заказчик</th><th>Прошлая закупка</th><th class="n">Цена год назад</th><th>Держит договор</th></tr>'+list.slice(0,50).map(r=>{
     const d=Math.round((r.exp-today)/864e5);
     return `<tr><td style="white-space:nowrap"><span class="days ${d<=14?'soon':''}">≈ ${fmtD(r.exp)}</span><br><span class="note">${d<=0?'уже сейчас':'через '+d+' дн.'}</span></td>
-      <td>${esc(r.type)}</td><td>${custLink(r.customer,90)}</td>
+      <td>${esc(r.type)}</td><td>${custLink(r.customer,160)}</td>
       <td>${r.num?`<a href="${link(r)}" target="_blank" rel="noopener">${esc(r.object.slice(0,110))}</a>`:esc(r.object.slice(0,110))}<br><span class="note">${r.law}, объявлена ${fmtD(r.date)}${multiYear(r.object)?' · в предмете два года — договор может быть многолетним':''}</span></td>
-      <td class="n">${money(r.price)}${r.cprice>0?`<br><span class="note">договор ${money(r.cprice)}</span>`:''}</td>
+      <td class="n">${money(r.price)}${r.cprice>0?`<br><span class="note">договор ${money(r.cprice)}${r.disc>=0.005?` (−${pct(r.disc)})`:''}</span>`:''}</td>
       <td>${holderCell(r)}</td></tr>`; }).join('')
     : '<tr><td class="empty">В выборке нет таких закупок</td></tr>';
 }
@@ -1148,8 +1163,10 @@ function custSearch(q){
   const byName=Object.keys(CUST).filter(k=>{ const n=norm(k); return words.every(w=>n.includes(w)); });
   const sums={}; const hits=[...new Set([...byNum,...byName])];
   hits.forEach(k=>sums[k]=custSum(k)); hits.sort((a,b)=>sums[b]-sums[a]);
-  box.innerHTML = hits.length
-    ? hits.slice(0,8).map(k=>`<button data-cust="${esc(k)}"><span>${esc(k.slice(0,120))}</span><span class="m">${nf.format(CUST[k].length)} · ${money(sums[k])}</span></button>`).join('')
+  const ins=Object.keys(INS).filter(k=>{ const n=norm(k); return words.every(w=>n.includes(w)); }).sort((a,b)=>INS[b].length-INS[a].length).slice(0,3);
+  box.innerHTML = (ins.length || hits.length)
+    ? ins.map(k=>`<button data-ins="${esc(k)}"><span>${esc(k)}</span><span class="m">страховщик · ${nf.format(INS[k].length)} побед</span></button>`).join('')
+      + hits.slice(0,8).map(k=>`<button data-cust="${esc(k)}"><span>${esc(k.slice(0,120))}</span><span class="m">${nf.format(CUST[k].length)} · ${money(sums[k])}</span></button>`).join('')
       + (hits.length>8 ? `<div class="note">и ещё ${nf.format(hits.length-8)} — уточните запрос</div>` : '')
     : '<div class="note">Не нашлось. Попробуйте часть названия без кавычек и формы собственности.</div>';
 }
@@ -1170,6 +1187,17 @@ function showCustomer(name){
     return fut[0] || {r:a[0], e:plusYear(a[0].date)};
   }).sort((a,b)=>a.e-b.e);
   const laws=[...new Set(rows.map(r=>r.law))].join(', ');
+  // как здесь выигрывают: торги или нет, насколько падает цена, кто держит заказчика
+  const single=live.filter(isSingle), ss=single.reduce((a,r)=>a+r.price,0);
+  const dl=live.map(r=>r.disc).filter(isFinite), withW=live.filter(r=>r.winner);
+  const topc=Object.entries(w).sort((a,b)=>b[1].c-a[1].c)[0];
+  const bk=live.filter(r=>isFinite(r.bids) && r.bids>0);
+  const how=[
+    single.length ? `Без торгов, у единственного поставщика: ${nf.format(single.length)} из ${nf.format(live.length)} закупок, ${pct(sum? ss/sum : 0)} денег.` : 'Все закупки шли через торги.',
+    dl.length ? `Медиана снижения цены на торгах — ${pct(median(dl))}, по ${nf.format(dl.length)} закупкам (ОСАГО не считается).` : '',
+    topc && withW.length>1 ? `Чаще всех выигрывает ${insLink(topc[0])}: ${nf.format(topc[1].c)} из ${nf.format(withW.length)} закупок с известным победителем.` : '',
+    bk.length ? `По 223-ФЗ одна заявка — в ${nf.format(bk.filter(r=>r.bids===1).length)} из ${nf.format(bk.length)} закупок, где число заявок известно.` : '',
+  ].filter(Boolean);
   $('custView').innerHTML = `
     <div class="cv-name">${esc(name)}</div>
     <div class="note" style="margin-top:0">${laws} · закупки с ${fmtD(rows[rows.length-1].date)} по ${fmtD(rows[0].date)}</div>
@@ -1179,18 +1207,52 @@ function showCustomer(name){
       <div><b>${wc.length? money(csum) : '—'}</b><span>${wc.length? `цены договоров (${nf.format(wc.length)} закупок)` : 'цены договоров неизвестны'}</span></div>
       <div><b>${types.length? esc(types[0][0]) : '—'}</b><span>главный вид${types.length>1?`, всего видов: ${types.length}`:''}</span></div>
     </div>
+    <div class="cv-sec">Как здесь выигрывают</div>
+    <ul class="insights">${how.map(x=>`<li>${x}</li>`).join('')}</ul>
     <div class="cv-sec">Когда ждать следующую закупку</div>
-    <ul class="insights">${nexts.map(({r,e})=>`<li><b>${esc(r.type)}</b> — ${e<today ? `ожидалась ≈ ${fmtD(e)}, пока не объявлена` : `≈ ${fmtD(e)}`}${r.winner?`, сейчас держит ${esc(r.winner)}`:''}; по закупке от ${fmtD(r.date)} на ${money(r.price)}</li>`).join('')}</ul>
+    <ul class="insights">${nexts.map(({r,e})=>`<li><b>${esc(r.type)}</b> — ${e<today ? `ожидалась ≈ ${fmtD(e)}, пока не объявлена` : `≈ ${fmtD(e)}`}${r.winner?`, сейчас держит ${insLink(r.winner)}`:''}; по закупке от ${fmtD(r.date)} на ${money(r.price)}</li>`).join('')}</ul>
     <div class="cv-sec">У кого покупал</div>
-    ${wl.length ? `<div class="tablewrap"><table><tr><th>Страховщик</th><th>Виды</th><th class="n">Закупок</th><th class="n">Сумма договоров</th></tr>${wl.map(([k,x])=>`<tr><td>${esc(k)}</td><td>${Object.keys(x.t).map(esc).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td></tr>`).join('')}</table></div>`
+    ${wl.length ? `<div class="tablewrap"><table><tr><th>Страховщик</th><th>Виды</th><th class="n">Закупок</th><th class="n">Сумма договоров</th></tr>${wl.map(([k,x])=>`<tr><td>${insLink(k)}</td><td>${Object.keys(x.t).map(esc).join(', ')}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td></tr>`).join('')}</table></div>`
       : `<div class="note">${rows.some(r=>r.law==='223-ФЗ') ? 'По 223-ФЗ названия победителей в протоколах ЕИС обезличены.' : 'Победители в данных не указаны.'}</div>`}
     <div class="cv-sec">Все закупки</div>
     <div class="tablewrap"><table><tr><th>Дата</th><th>Вид</th><th>Предмет</th><th class="n">Начальная цена</th><th class="n">Договор</th><th>Победитель</th></tr>${rows.map(r=>{
       const c=/отмен/i.test(r.stage);
       return `<tr class="${c?'off':''}"><td>${fmtD(r.date)}<br><span class="note">${r.law}</span></td><td>${esc(r.type)}</td>
         <td>${r.num?`<a href="${link(r)}" target="_blank" rel="noopener">${esc(r.object.slice(0,140))}</a>`:esc(r.object.slice(0,140))}${c?'<br><span class="note">отменена</span>':''}</td>
-        <td class="n">${money(r.price)}</td><td class="n">${r.cprice>0? money(r.cprice) : '—'}${isFinite(r.disc)?`<br><span class="note">−${pct(r.disc)}</span>`:''}</td>
+        <td class="n">${money(r.price)}</td><td class="n">${r.cprice>0? money(r.cprice) : '—'}${isFinite(r.disc)?`<br><span class="note">−${pct(r.disc)}</span>`: isFinite(r.cap)?`<br><span class="note">−${pct(r.cap)} к потолку</span>`:''}</td>
         <td>${c?'—':holderCell(r)}</td></tr>`; }).join('')}</table></div>`;
+}
+
+/* ---------- карточка страховщика ---------- */
+function insLink(name){ return `<a href="#" class="cust" data-ins="${esc(name)}">${esc(name)}</a>`; }
+function showInsurer(name){
+  const rows=(INS[name]||[]).filter(r=>!isCancelled(r)); if (!rows.length) return;
+  CUR_CUST=null; $('custSugg').innerHTML=''; $('custQ').value=name;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const end=new Date(today); end.setDate(end.getDate()+CAL_DAYS);
+  const val=r=>r.cprice>0? r.cprice : r.price;
+  const sum=rows.reduce((a,r)=>a+val(r),0), dl=rows.map(r=>r.disc).filter(isFinite);
+  const tt={}; rows.forEach(r=>{ const x=tt[r.type]||(tt[r.type]={c:0,s:0,d:[]}); x.c++; x.s+=val(r); if(isFinite(r.disc)) x.d.push(r.disc); });
+  const cu={}; rows.forEach(r=>{ const x=cu[r.customer]||(cu[r.customer]={c:0,s:0}); x.c++; x.s+=val(r); });
+  const soon=CAL.filter(r=>r.winner===name).sort((a,b)=>b.price-a.price), soonSum=soon.reduce((a,r)=>a+r.price,0);
+  const laws=[...new Set(rows.map(r=>r.law))].join(', ');
+  $('custView').innerHTML = `
+    <div class="cv-name">${esc(name)}</div>
+    <div class="note" style="margin-top:0">страховщик · выигранные закупки, ${laws}, с ${fmtD(rows[rows.length-1].date)} по ${fmtD(rows[0].date)}</div>
+    <div class="cv-kpis">
+      <div><b>${nf.format(rows.length)}</b><span>выигранных закупок</span></div>
+      <div><b>${money(sum)}</b><span>сумма договоров</span></div>
+      <div><b>${nf.format(Object.keys(cu).length)}</b><span>заказчиков</span></div>
+      <div><b>${dl.length? pct(median(dl)) : '—'}</b><span>медиана снижения цены, без ОСАГО</span></div>
+    </div>
+    <div class="cv-sec">Его договоры, которые скоро выйдут на торги</div>
+    ${soon.length ? `<div class="note" style="margin:0 0 6px">${nf.format(soon.length)} ${plural(soon.length,'закупка','закупки','закупок')} на ${money(soonSum)} по прошлогодним начальным ценам, до ${fmtD(end)}${soon.length>15?'; показаны 15 крупнейших':''}.</div>
+      <div class="tablewrap"><table><tr><th>Ожидается</th><th>Вид</th><th>Заказчик</th><th class="n">Цена год назад</th></tr>${soon.slice(0,15).map(r=>`<tr><td style="white-space:nowrap">≈ ${fmtD(r.exp)}</td><td>${esc(r.type)}</td><td>${custLink(r.customer,160)}</td><td class="n">${money(r.price)}${r.cprice>0?`<br><span class="note">договор ${money(r.cprice)}${r.disc>=0.005?` (−${pct(r.disc)})`:''}</span>`:''}</td></tr>`).join('')}</table></div>`
+      : '<div class="note">В ближайшие три месяца его договоры на торги не выходят (с учётом фильтров).</div>'}
+    <div class="cv-sec">Где выигрывает</div>
+    <div class="tablewrap"><table><tr><th>Вид</th><th class="n">Закупок</th><th class="n">Сумма договоров</th><th class="n">Снижение, медиана</th></tr>${Object.entries(tt).sort((a,b)=>b[1].s-a[1].s).map(([k,x])=>`<tr><td>${esc(k)}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td><td class="n">${x.d.length? pct(median(x.d)) : (k==='ОСАГО'?'<span class="note">не торг</span>':'—')}</td></tr>`).join('')}</table></div>
+    <div class="cv-sec">Крупнейшие заказчики</div>
+    <div class="tablewrap"><table><tr><th>Заказчик</th><th class="n">Закупок</th><th class="n">Сумма договоров</th></tr>${Object.entries(cu).sort((a,b)=>b[1].s-a[1].s).slice(0,15).map(([k,x])=>`<tr><td>${custLink(k,300)}</td><td class="n">${nf.format(x.c)}</td><td class="n">${money(x.s)}</td></tr>`).join('')}</table></div>`;
 }
 
 function toggleType(k){
@@ -1247,10 +1309,11 @@ $('csvOut').onclick=exportCSV;
 $('calCsv').onclick=exportCal;
 $('calKnown').addEventListener('change',()=>{ const t=new Date(); t.setHours(0,0,0,0); renderCal(t); });
 $('custQ').addEventListener('input',e=>custSearch(e.target.value));
-$('custQ').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const b=$('custSugg').querySelector('button'); if(b) showCustomer(b.dataset.cust); } });
+$('custQ').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const b=$('custSugg').querySelector('button'); if(b) b.dataset.ins ? showInsurer(b.dataset.ins) : showCustomer(b.dataset.cust); } });
 document.addEventListener('click',e=>{
-  const a=e.target.closest('[data-cust]'); if(!a) return;
-  e.preventDefault(); showCustomer(a.dataset.cust);
+  const a=e.target.closest('[data-cust],[data-ins]'); if(!a) return;
+  e.preventDefault();
+  if (a.dataset.ins) showInsurer(a.dataset.ins); else showCustomer(a.dataset.cust);
   if (!a.closest('#custCard')) $('custCard').scrollIntoView({behavior:'smooth', block:'start'});
 });
 const SRC=new URLSearchParams(location.search).get('src');
